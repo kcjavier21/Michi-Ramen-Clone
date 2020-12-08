@@ -1,0 +1,55 @@
+.navigation-bar {
+    border-style: solid;
+    border-width: 1px;
+
+    width: 50%;
+    height: 132px;
+
+    justify-content: center;
+    text-decoration: none;
+
+    position: sticky;
+    margin: 0 auto;
+
+    .logo {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+    }
+
+    .navigation-bar-2 {
+        border-style: solid;
+        border-width: 1px;
+        width: 50%;
+        text-align: center;
+        
+        margin: 64px auto;
+        
+    }
+
+    .btn-order-online {
+        background-color: rgb(255, 194, 39);
+        padding: 8px;
+        border-radius: 8px;
+
+        color: white;
+        font-weight: bold;
+        right: 20px;
+        top: 56px;
+        position: absolute;
+
+        font-size: 20px;
+
+    }
+
+    .nav-menu {
+        text-decoration: none;
+        padding: 20px;
+        align-self: center;
+
+        color: black;
+        font-weight: 700;
+        font-size: 20px;
+    }
+}

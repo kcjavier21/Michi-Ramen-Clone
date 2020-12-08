@@ -10,11 +10,14 @@ import About from './components/pages/about.jsx';
 import Email from './components/pages/email.jsx';
 import NotFound from './components/pages/not-found.jsx';
 
+import NavBar from './components/commons/navbar.jsx';
+
 
 export default class App extends Component {
   render() {
     return (
       <div>
+          <NavBar/>
           <div className="content">
             <Switch>
                 <Route path="/menu" component={Menu}/>

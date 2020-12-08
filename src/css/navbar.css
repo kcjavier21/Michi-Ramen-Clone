@@ -1,0 +1,52 @@
+.navigation-bar {
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  height: 132px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: 0 auto;
+}
+
+.navigation-bar .logo {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
+.navigation-bar .navigation-bar-2 {
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  text-align: center;
+  margin: 64px auto;
+}
+
+.navigation-bar .btn-order-online {
+  background-color: #ffc227;
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  right: 20px;
+  top: 56px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.navigation-bar .nav-menu {
+  text-decoration: none;
+  padding: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+/*# sourceMappingURL=navbar.css.map */
