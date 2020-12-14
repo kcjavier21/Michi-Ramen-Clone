@@ -1,0 +1,18 @@
+@mixin add-testing-border() {
+    border-style: solid;
+    border-width: 1px;
+}
+
+@mixin center() {
+    justify-self: center;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+@mixin ordering-system-images($width, $left, $marginTop) {
+    //position: absolute;
+    width: $width;
+    left: $left;
+    margin-top: $marginTop;
+}

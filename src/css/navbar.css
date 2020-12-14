@@ -1,8 +1,12 @@
-.navigation-bar {
+.nav-section {
+  background-image: url("../assets/images/wood.jpg");
+}
+
+.nav-section .navigation-bar {
   border-style: solid;
-  border-width: 1px;
-  width: 50%;
-  height: 132px;
+  border-color: rgba(0, 0, 0, 0);
+  width: 52%;
+  height: 140px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -12,25 +16,23 @@
   margin: 0 auto;
 }
 
-.navigation-bar .logo {
+.nav-section .navigation-bar .logo {
   position: absolute;
   height: 100px;
   width: 100px;
   margin: 20px;
 }
 
-.navigation-bar .navigation-bar-2 {
-  border-style: solid;
-  border-width: 1px;
+.nav-section .navigation-bar .navigation-bar-2 {
   width: 50%;
   text-align: center;
   margin: 64px auto;
 }
 
-.navigation-bar .btn-order-online {
+.nav-section .navigation-bar .btn-order-online {
   background-color: #ffc227;
-  padding: 8px;
-  border-radius: 8px;
+  padding: 8px 24px;
+  border-radius: 4px;
   color: white;
   font-weight: bold;
   right: 20px;
@@ -39,13 +41,13 @@
   font-size: 20px;
 }
 
-.navigation-bar .nav-menu {
+.nav-section .navigation-bar .nav-menu {
   text-decoration: none;
   padding: 20px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  color: black;
+  color: #ffff;
   font-weight: 700;
   font-size: 20px;
 }

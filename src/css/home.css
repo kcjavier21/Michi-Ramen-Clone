@@ -1,0 +1,123 @@
+.hero {
+  height: 700px;
+  width: 100%;
+  background-image: url("../assets/images/wood.jpg");
+  background-position: center;
+  background-size: 120%;
+  padding-top: 100px;
+}
+
+.hero .title {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  font-size: 92px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #ffff;
+  top: 100px;
+}
+
+.hero .tagline {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #ffff;
+}
+
+.hero .bowl {
+  display: block;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 56px;
+}
+
+.ordering-system {
+  background-image: url("../assets/images/texture_pattern_2X.jpg");
+  width: 70%;
+  margin: 0 auto;
+}
+
+.ordering-system .how-to-order {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+  margin-top: 60px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #e60033;
+}
+
+.ordering-system .order-sys-imgs {
+  border-style: solid;
+  border-width: 1px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto;
+  justify-items: center;
+}
+
+.ordering-system .order-sys-imgs .pick-ramen {
+  border-style: solid;
+  border-width: 1px;
+  height: 180px;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.ordering-system .order-sys-imgs .pick-broth {
+  border-style: solid;
+  border-width: 1px;
+  height: 160px;
+  margin: 0;
+  margin-top: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.ordering-system .order-sys-imgs .add-toppings {
+  border-style: solid;
+  border-width: 1px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  height: 180px;
+  margin: 0;
+  margin-top: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.ordering-system .order-sys-imgs .right-arrow-1 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 72px;
+}
+
+.ordering-system .order-sys-imgs .right-arrow-2 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 72px;
+}
+/*# sourceMappingURL=home.css.map */

@@ -13,22 +13,24 @@ import NotFound from './components/pages/not-found.jsx';
 import NavBar from './components/commons/navbar.jsx';
 
 
+
 export default class App extends Component {
   render() {
     return (
       <div>
-          <NavBar/>
+          
           <div className="content">
+          <NavBar />
             <Switch>
-                <Route path="/menu" component={Menu}/>
-                <Route path="/locations" component={Locations}/>
-                <Route path="/about" component={About}/>
-                <Route path="/email" component={Email}/>
-                <Route path="/home" component={Home}/>
-                <Route path="not-found" component={NotFound}/>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/menu" component={Menu}/>
+                <Route exact path="/locations" component={Locations}/>
+                <Route exact path="/about" component={About}/> 
+                <Route exact path="/email" component={Email}/>  
+                <Route exact path="/not-found" component={NotFound}/>
                 
-                <Redirect from="/" exact to="/home"/>
-                <Redirect from="/not-found"/>
+                <Redirect from="/home" exact to="/"/>
+                <Redirect to="/not-found"/>
             </Switch>
           </div>
       </div>
