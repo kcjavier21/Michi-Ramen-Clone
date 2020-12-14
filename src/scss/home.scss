@@ -44,32 +44,36 @@
     }
 
 }
+.ordering-system-container {
+    background-image: url('../assets/images/texture_pattern_2X.jpg');
+    //min-width: 2500px; 
+    padding: 20px 0 100px 0;
+    margin: 0px;
+}
 
 .ordering-system {
     //@include add-testing-border();
-    background-image: url('../assets/images/texture_pattern_2X.jpg');
     width: 70%;
     margin: 0 auto;
     
     .how-to-order {
-        //border-style: solid;
-        //border-width: 1px;
         //@include add-testing-border();
         @include center();
 
         width: 40%;
         
-        margin-top:60px;
+        margin-top:40px;
 
-        font-size: 36px;
+        font-size: 40px;
         font-weight: 600;
         color: #e60033;
     }
 
     .order-sys-imgs {
-        @include add-testing-border();
+        //@include add-testing-border();
+        @include center();
         //height: 100px;
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
         margin-top: 30px;
         display: grid;
@@ -78,53 +82,72 @@
         justify-items: center;
         //grid-gap: 6%;
 
-        .pick-ramen {
-            @include add-testing-border();
-            
-            height: 180px;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-    
-        .pick-broth {
-            @include add-testing-border();
-
-            height: 160px;
-            margin: 0;
-            margin-top: 16px;
-            padding: 20px;
-            text-align: center;
-        }
-    
-        .add-toppings {  
-            @include add-testing-border();
-           
-            @include center();
-            
-            height: 180px;
-            margin: 0;
-            margin-top: 4px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .right-arrow-1 {
+        
+        .order-sys-imgs-container {   
             //@include add-testing-border();
-            @include center();
+            padding: 0;
+            margin-top: 20px;
 
-            margin-top: 72px;
-            
+            p {
+                //@include add-testing-border();
+                @include center();
+
+                font-family: Economica, sans-serif;
+                font-size: 28px;
+                font-weight: 500;
+                transform: scale(.8, 1.2);
+                letter-spacing: 2px;
+                margin-top: 20px;
+             
+                
+            }
+            .pick-ramen {
+                //@include add-testing-border();
+                @include center();
+
+                height: 160px;
+                margin: 0 auto;
+                margin-bottom: 2px;
+                padding: 0px;
+                text-align: center;
+              
+                
+            }
+        
+            .pick-broth {
+                //@include add-testing-border();
+                @include center();
+
+                height: 144px;
+                margin: 0;
+                margin-top: 16px;
+                margin-bottom: 4px;
+                padding: 0;
+                text-align: center;
+                
+            }
+        
+            .add-toppings {  
+                //@include add-testing-border();
+                @include center();
+                
+                height: 160px;
+                margin: 0;
+                margin-top: 4px;
+                padding: 0 32px;
+                text-align: center;
+            }
+
+            .right-arrow {
+                //@include add-testing-border();
+                @include center();
+
+                margin-top: 72px;
+                width: 24px;
+            }
         }
-
-        .right-arrow-2 {
-            //@include add-testing-border();
-            @include center();
-
-            margin-top: 72px;
             
-        }
+    } 
 
-    }
     
 }

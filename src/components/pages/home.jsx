@@ -13,19 +13,44 @@ export default class Home extends Component {
                 <div className="hero">
                     <h1 className="title">MICHI RAMEN</h1>
                     <h4 className="tagline">NEW NORTHWEST AUSTIN LOCATION AT 183 & ANDERSON MILL!</h4>
-                    <img src={bowl} className="bowl"/>
+                    <img src={bowl} className="bowl" alt="bowl"/>
                 </div>
 
-                <div className="ordering-system">
-                    <h1 className="how-to-order">HOW TO ORDER</h1>
-                    <div className="order-sys-imgs">
-                        <img src={pickRamen} className="pick-ramen"/>  
-                            <img src={rightArrow} className="right-arrow-1"/>  
-                        <img src={pickBroth} className="pick-broth"/>
-                        <img src={rightArrow} className="right-arrow-2"/> 
-                        <img src={addToppings} className="add-toppings"/>  
+
+                <div className="ordering-system-container">
+                    <div className="ordering-system">
+                        
+                        <h1 className="how-to-order">HOW TO ORDER</h1>
+                        
+                        <div className="order-sys-imgs">
+
+                            <div className="order-sys-imgs-container">
+                                <img src={pickRamen} className="pick-ramen" alt="pick-ramen"/>
+                                <p>PICK YOUR RAMEN</p>
+                            </div>
+
+                            <div className="order-sys-imgs-container">
+                                <img src={rightArrow} className="right-arrow" alt="right-arrow"/>  
+                            </div>
+
+                            <div className="order-sys-imgs-container">
+                                <img src={pickBroth} className="pick-broth" alt="pick-broth"/>
+                                <p>PICK YOUR BROTH</p>
+                            </div>
+
+                            <div className="order-sys-imgs-container">
+                                <img src={rightArrow} className="right-arrow" alt="right-arrow"/> 
+                            </div>
+
+                            <div className="order-sys-imgs-container">
+                                <img src={addToppings} className="add-toppings" alt="add-toppings"/>  
+                                <p>ADD TOPPINGS</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
+
             </React.Fragment>
         )
     }
