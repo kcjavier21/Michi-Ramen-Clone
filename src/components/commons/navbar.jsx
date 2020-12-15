@@ -10,7 +10,7 @@ class NavBar extends Component {
         return (
             <div className="nav-section">
                 <nav className="navigation-bar">
-                    <NavLink to="/" className="nav-menu">
+                    <NavLink to="/">
                         <img src={logo} className="logo" alt="Logo"/>
                     </NavLink>
 

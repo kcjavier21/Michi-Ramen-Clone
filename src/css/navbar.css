@@ -1,11 +1,17 @@
 .nav-section {
+  border-style: solid;
+  border-width: 1px;
   background-image: url("../assets/images/wood.jpg");
+  width: 100%;
 }
 
 .nav-section .navigation-bar {
   border-style: solid;
+  border-width: 1px;
+  border-style: solid;
+  border-width: 1px;
   border-color: rgba(0, 0, 0, 0);
-  width: 45%;
+  width: 1000px;
   height: 140px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -17,19 +23,26 @@
 }
 
 .nav-section .navigation-bar .logo {
+  border-style: solid;
+  border-width: 1px;
   position: absolute;
   height: 100px;
   width: 100px;
   top: 40px;
+  left: 40px;
 }
 
 .nav-section .navigation-bar .navigation-bar-2 {
+  border-style: solid;
+  border-width: 1px;
   width: 50%;
   text-align: center;
-  margin: 64px auto;
+  margin: 84px auto;
 }
 
 .nav-section .navigation-bar .btn-order-online {
+  border-style: solid;
+  border-width: 1px;
   background-color: #ffc227;
   padding: 8px 24px;
   border-radius: 4px;
@@ -42,8 +55,10 @@
 }
 
 .nav-section .navigation-bar .nav-menu {
+  border-style: solid;
+  border-width: 1px;
   text-decoration: none;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;

@@ -8,11 +8,13 @@
 }
 
 .hero .title {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  width: 840px;
   font-size: 92px;
   font-weight: 700;
   letter-spacing: 8px;
@@ -21,11 +23,13 @@
 }
 
 .hero .tagline {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  width: 840px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -34,11 +38,15 @@
 
 .hero .bowl {
   display: block;
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  margin-top: 56px;
+  text-align: center;
+  margin-top: 50px;
+  max-width: 100%;
 }
 
 .ordering-system-container {
@@ -48,11 +56,16 @@
 }
 
 .ordering-system {
-  width: 70%;
+  border-style: solid;
+  border-width: 1px;
+  width: 60%;
+  padding: 0;
   margin: 0 auto;
 }
 
 .ordering-system .how-to-order {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -64,14 +77,16 @@
   color: #e60033;
 }
 
-.ordering-system .order-sys-imgs {
+.ordering-system .order-sys-imgs-container {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 40px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto auto auto;
@@ -79,12 +94,16 @@
   justify-items: center;
 }
 
-.ordering-system .order-sys-imgs .order-sys-imgs-container {
+.ordering-system .order-sys-imgs-container .order-sys-imgs {
+  border-style: solid;
+  border-width: 1px;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 0;
 }
 
-.ordering-system .order-sys-imgs .order-sys-imgs-container p {
+.ordering-system .order-sys-imgs-container .order-sys-imgs p {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -98,7 +117,9 @@
   margin-top: 20px;
 }
 
-.ordering-system .order-sys-imgs .order-sys-imgs-container .pick-ramen {
+.ordering-system .order-sys-imgs-container .order-sys-imgs .pick-ramen {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -110,7 +131,15 @@
   text-align: center;
 }
 
-.ordering-system .order-sys-imgs .order-sys-imgs-container .pick-broth {
+@media (max-width: 1920px) {
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-ramen {
+    height: 120px;
+  }
+}
+
+.ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -123,7 +152,15 @@
   text-align: center;
 }
 
-.ordering-system .order-sys-imgs .order-sys-imgs-container .add-toppings {
+@media (max-width: 1920px) {
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
+    height: 112px;
+  }
+}
+
+.ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -135,12 +172,26 @@
   text-align: center;
 }
 
-.ordering-system .order-sys-imgs .order-sys-imgs-container .right-arrow {
+@media (max-width: 1920px) {
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
+    height: 120px;
+  }
+}
+
+.ordering-system .order-sys-imgs-container .order-sys-imgs .right-arrow {
+  border-style: solid;
+  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
   text-align: center;
   margin-top: 72px;
   width: 24px;
+}
+
+@media (max-width: 1920px) {
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .right-arrow {
+    width: 20px;
+  }
 }
 /*# sourceMappingURL=home.css.map */

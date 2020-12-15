@@ -7,13 +7,13 @@
     background-position: center;
     background-size: 120%;
     padding-top: 100px;
-
-
+    
+    
     .title{
-        //@include add-testing-border();
+        @include add-testing-border();
         @include center();
         
-        width: 50%;
+        width: 840px;
 
         font-size: 92px;
         font-weight: 700;
@@ -25,10 +25,10 @@
     }
 
     .tagline {
-        //@include add-testing-border();
+        @include add-testing-border();
         @include center();
 
-        width: 50%;
+        width: 840px;
 
         font-size: 20px;
         font-weight: 500;
@@ -36,12 +36,20 @@
         color: #ffff;
     }
 
-    .bowl {
-        display: block;
-      
-        @include center();
-        margin-top: 56px;
-    }
+    
+        
+        .bowl {
+           
+            display: block;
+            //width: 79%;
+            @include add-testing-border();
+            @include center();
+            text-align: center;
+            margin-top: 50px;
+            max-width: 100%;
+        }
+    
+    
 
 }
 .ordering-system-container {
@@ -52,12 +60,13 @@
 }
 
 .ordering-system {
-    //@include add-testing-border();
-    width: 70%;
+    @include add-testing-border();
+    width: 60%;
+    padding: 0;
     margin: 0 auto;
     
     .how-to-order {
-        //@include add-testing-border();
+        @include add-testing-border();
         @include center();
 
         width: 40%;
@@ -69,27 +78,25 @@
         color: #e60033;
     }
 
-    .order-sys-imgs {
-        //@include add-testing-border();
+    .order-sys-imgs-container {
+        @include add-testing-border();
         @include center();
-        //height: 100px;
-        width: 60%;
+
+        width: 80%;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 40px;
         display: grid;
        
         grid-template-columns: auto auto auto auto auto;
         justify-items: center;
-        //grid-gap: 6%;
 
-        
-        .order-sys-imgs-container {   
-            //@include add-testing-border();
+        .order-sys-imgs {   
+            @include add-testing-border();
             padding: 0;
-            margin-top: 20px;
+            margin-top: 0;
 
             p {
-                //@include add-testing-border();
+                @include add-testing-border();
                 @include center();
 
                 font-family: Economica, sans-serif;
@@ -98,11 +105,11 @@
                 transform: scale(.8, 1.2);
                 letter-spacing: 2px;
                 margin-top: 20px;
-             
-                
+                              
             }
+
             .pick-ramen {
-                //@include add-testing-border();
+                @include add-testing-border();
                 @include center();
 
                 height: 160px;
@@ -110,12 +117,15 @@
                 margin-bottom: 2px;
                 padding: 0px;
                 text-align: center;
-              
-                
+
+                @include fullHD{
+                    height: 120px;   
+                }
+
             }
         
             .pick-broth {
-                //@include add-testing-border();
+                @include add-testing-border();
                 @include center();
 
                 height: 144px;
@@ -124,11 +134,15 @@
                 margin-bottom: 4px;
                 padding: 0;
                 text-align: center;
+
+                @include fullHD{
+                    height: 112px;   
+                }
                 
             }
         
             .add-toppings {  
-                //@include add-testing-border();
+                @include add-testing-border();
                 @include center();
                 
                 height: 160px;
@@ -136,14 +150,22 @@
                 margin-top: 4px;
                 padding: 0 32px;
                 text-align: center;
+
+                @include fullHD{
+                    height: 120px;   
+                }
             }
 
             .right-arrow {
-                //@include add-testing-border();
+                @include add-testing-border();
                 @include center();
 
                 margin-top: 72px;
                 width: 24px;
+
+                @include fullHD{
+                    width: 20px;  
+                }
             }
         }
             
