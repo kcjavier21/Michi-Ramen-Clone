@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import '../../css/home.css';
-import bowl from '../../assets/images/hero-image-2.png';
-import rightArrow from '../../assets/images/right-arrow.png';
-import pickRamen from '../../assets/images/pick-ramen.png';
-import pickBroth from '../../assets/images/pick-broth.png';
-import addToppings from '../../assets/images/add-toppings.png';
 
-export default class Home extends Component {
-    
+import '../../../../css/home.css';
+// import bowl from '../../../assets/images/hero-image-2.png';
+import rightArrow from '../../../../assets/images/right-arrow.png';
+import pickRamen from '../../../../assets/images/pick-ramen.png';
+import pickBroth from '../../../../assets/images/pick-broth.png';
+import addToppings from '../../../../assets/images/add-toppings.png';
+
+export default class HowToOrder extends Component {
     data = [
         { image: pickRamen, class_name: "pick-ramen", key:"pick-ramen", label: "PICK YOUR RAMEN" },
         { image: rightArrow, class_name: "right-arrow", key:"right-arrow", label: "" },
@@ -25,17 +25,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <div className="hero">
-                    <h1 className="title">MICHI RAMEN</h1>
-                    <h4 className="tagline">NEW NORTHWEST AUSTIN LOCATION AT 183 & ANDERSON MILL!</h4>
-                    <figure class="img-wrap contain">
-                        <img src={bowl} className="bowl" alt="bowl"/>
-                    </figure>
-                        
-                </div>
-
-                {/* How To Order Section */}
+            <div>
                 <div className="ordering-system-container">
                     <div className="ordering-system">
                         <h1 className="how-to-order">HOW TO ORDER</h1>                       
@@ -44,7 +34,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
         )
     }
 }

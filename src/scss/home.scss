@@ -1,26 +1,43 @@
 @import './mixins';
 
 .hero{
-    height: 700px;
+    height: 800px;
     width: 100%;
     background-image: url('../assets/images/wood.jpg');
     background-position: center;
     background-size: 120%;
-    padding-top: 100px;
-    
+    padding-top: 10px;
+
+    position: relative;
+
+    @include medium {
+        max-height: 90vw;
+    }
+
     
     .title{
         @include add-testing-border();
         @include center();
         
-        width: 840px;
+        width: 800px;
+
+        max-width: 90%;
 
         font-size: 92px;
         font-weight: 700;
         letter-spacing: 8px;
         color: #ffff;
 
-        top: 100px;
+        margin-top: 80px;
+        
+
+        @include tablet {
+            font-size: 8vw;
+        }
+
+        @include large-mobile {
+            margin-top: 12vw;
+        }
 
     }
 
@@ -28,24 +45,28 @@
         @include add-testing-border();
         @include center();
 
-        width: 840px;
+        width: 800px;
 
         font-size: 20px;
         font-weight: 500;
         letter-spacing: 2px;
         color: #ffff;
+
+        max-width: 90%;
+
+        @include tablet {
+            font-size: 12px;
+        }
+
     }
 
     
         
         .bowl {
-           
-            display: block;
-            //width: 79%;
             @include add-testing-border();
-            @include center();
-            text-align: center;
-            margin-top: 50px;
+            @include absolutely-centered;
+            position: absolute;
+            bottom: 0;
             max-width: 100%;
         }
     
@@ -61,9 +82,10 @@
 
 .ordering-system {
     @include add-testing-border();
-    width: 60%;
+    width: 1200px;
     padding: 0;
     margin: 0 auto;
+    max-width: 100%;
     
     .how-to-order {
         @include add-testing-border();
@@ -82,13 +104,14 @@
         @include add-testing-border();
         @include center();
 
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         margin-top: 40px;
         display: grid;
        
         grid-template-columns: auto auto auto auto auto;
         justify-items: center;
+                
 
         .order-sys-imgs {   
             @include add-testing-border();
@@ -100,11 +123,11 @@
                 @include center();
 
                 font-family: Economica, sans-serif;
-                font-size: 28px;
+                font-size: 24px;
                 font-weight: 500;
                 transform: scale(.8, 1.2);
                 letter-spacing: 2px;
-                margin-top: 20px;
+                margin-top: 20px
                               
             }
 
@@ -112,15 +135,10 @@
                 @include add-testing-border();
                 @include center();
 
-                height: 160px;
-                margin: 0 auto;
-                margin-bottom: 2px;
+                height: 120px;
+                margin-bottom: 4px;
                 padding: 0px;
                 text-align: center;
-
-                @include fullHD{
-                    height: 120px;   
-                }
 
             }
         
@@ -128,32 +146,24 @@
                 @include add-testing-border();
                 @include center();
 
-                height: 144px;
+                height: 112px;
                 margin: 0;
-                margin-top: 16px;
-                margin-bottom: 4px;
+                margin-top: 8px;
+                margin-bottom: 2px;
                 padding: 0;
                 text-align: center;
 
-                @include fullHD{
-                    height: 112px;   
-                }
-                
             }
         
             .add-toppings {  
                 @include add-testing-border();
                 @include center();
                 
-                height: 160px;
+                height: 120px;
                 margin: 0;
                 margin-top: 4px;
                 padding: 0 32px;
                 text-align: center;
-
-                @include fullHD{
-                    height: 120px;   
-                }
             }
 
             .right-arrow {
@@ -161,15 +171,112 @@
                 @include center();
 
                 margin-top: 72px;
-                width: 24px;
+                width: 20px;
 
-                @include fullHD{
-                    width: 20px;  
-                }
             }
         }
             
     } 
 
     
+}
+
+@media(max-width: 745px){
+    .ordering-system {
+        
+        .how-to-order {
+            @include add-testing-border();
+            @include center();
+    
+            width: 80%;
+            
+            margin-top:40px;
+            font-size: 32px;
+        }
+    
+        .order-sys-imgs-container {
+            @include add-testing-border();
+            @include center();
+    
+            width: 500px;
+            max-width: 100%;
+            //height: 50vw;
+            margin-top: 32px;
+           
+            grid-template-columns: auto;
+            grid-template-rows: 160px 70px 160px 70px 160px;
+            //grid-template-rows: 30px;
+            justify-items: center;
+                    
+    
+            .order-sys-imgs {   
+                @include add-testing-border();
+                padding: 0;
+                margin-top: 0;
+    
+                p {
+                    @include add-testing-border();
+                    @include center();
+    
+                    font-family: Economica, sans-serif;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transform: scale(.8, 1.2);
+                    letter-spacing: 2px;
+                    margin-top: 20px
+                                  
+                }
+    
+                .pick-ramen {
+                    @include add-testing-border();
+                    @include center();
+    
+                    height: 100px;
+                    margin-bottom: 4px;
+                    padding: 0px;
+                    text-align: center;
+    
+                }
+            
+                .pick-broth {
+                    @include add-testing-border();
+                    @include center();
+    
+                    height: 90px;
+                    margin: 0;
+                    margin-top: 8px;
+                    margin-bottom: 2px;
+                    padding: 0;
+                    text-align: center;
+    
+                }
+            
+                .add-toppings {  
+                    @include add-testing-border();
+                    @include center();
+                    
+                    height: 100px;
+                    margin: 0;
+                    margin-top: 4px;
+                    padding: 0 32px;
+                    text-align: center;
+                }
+    
+                .right-arrow {
+                    @include add-testing-border();
+                    @include center();
+    
+                    margin-top: 20px;
+                    width: 20px;
+
+                    transform: rotate(90deg);
+    
+                }
+            }
+                
+        } 
+    
+        
+    }
+
 }

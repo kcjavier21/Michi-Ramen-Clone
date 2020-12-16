@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import './App.css';
 
 //=== COMPONENTS ===
-import Home from './components/pages/home.jsx';
+import Home from './components/pages/home/home.jsx';
 import Menu from './components/pages/menu.jsx';
 import Locations from './components/pages/locations.jsx';
 import About from './components/pages/about.jsx';

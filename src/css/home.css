@@ -1,10 +1,17 @@
 .hero {
-  height: 700px;
+  height: 800px;
   width: 100%;
   background-image: url("../assets/images/wood.jpg");
   background-position: center;
   background-size: 120%;
-  padding-top: 100px;
+  padding-top: 10px;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    max-height: 90vw;
+  }
 }
 
 .hero .title {
@@ -14,12 +21,25 @@
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  width: 840px;
+  width: 800px;
+  max-width: 90%;
   font-size: 92px;
   font-weight: 700;
   letter-spacing: 8px;
   color: #ffff;
-  top: 100px;
+  margin-top: 80px;
+}
+
+@media (max-width: 820px) {
+  .hero .title {
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 535px) {
+  .hero .title {
+    margin-top: 12vw;
+  }
 }
 
 .hero .tagline {
@@ -29,23 +49,30 @@
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  width: 840px;
+  width: 800px;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
   color: #ffff;
+  max-width: 90%;
+}
+
+@media (max-width: 820px) {
+  .hero .tagline {
+    font-size: 12px;
+  }
 }
 
 .hero .bowl {
-  display: block;
   border-style: solid;
   border-width: 1px;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin: 0 auto;
+  margin: auto;
+  left: 0;
+  right: 0;
   text-align: center;
-  text-align: center;
-  margin-top: 50px;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
   max-width: 100%;
 }
 
@@ -58,9 +85,10 @@
 .ordering-system {
   border-style: solid;
   border-width: 1px;
-  width: 60%;
+  width: 1200px;
   padding: 0;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .ordering-system .how-to-order {
@@ -84,7 +112,7 @@
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 40px;
   display: -ms-grid;
@@ -109,7 +137,7 @@
   margin: 0 auto;
   text-align: center;
   font-family: Economica, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
   -webkit-transform: scale(0.8, 1.2);
           transform: scale(0.8, 1.2);
@@ -124,17 +152,10 @@
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  height: 160px;
-  margin: 0 auto;
-  margin-bottom: 2px;
+  height: 120px;
+  margin-bottom: 4px;
   padding: 0px;
   text-align: center;
-}
-
-@media (max-width: 1920px) {
-  .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-ramen {
-    height: 120px;
-  }
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
@@ -144,18 +165,12 @@
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  height: 144px;
+  height: 112px;
   margin: 0;
-  margin-top: 16px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 2px;
   padding: 0;
   text-align: center;
-}
-
-@media (max-width: 1920px) {
-  .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
-    height: 112px;
-  }
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
@@ -165,17 +180,11 @@
       justify-self: center;
   margin: 0 auto;
   text-align: center;
-  height: 160px;
+  height: 120px;
   margin: 0;
   margin-top: 4px;
   padding: 0 32px;
   text-align: center;
-}
-
-@media (max-width: 1920px) {
-  .ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
-    height: 120px;
-  }
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .right-arrow {
@@ -186,12 +195,108 @@
   margin: 0 auto;
   text-align: center;
   margin-top: 72px;
-  width: 24px;
+  width: 20px;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 745px) {
+  .ordering-system .how-to-order {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    margin-top: 40px;
+    font-size: 32px;
+  }
+  .ordering-system .order-sys-imgs-container {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    max-width: 100%;
+    margin-top: 32px;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 160px 70px 160px 70px 160px;
+        grid-template-rows: 160px 70px 160px 70px 160px;
+    justify-items: center;
+  }
+  .ordering-system .order-sys-imgs-container .order-sys-imgs {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    margin-top: 0;
+  }
+  .ordering-system .order-sys-imgs-container .order-sys-imgs p {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Economica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-transform: scale(0.8, 1.2);
+            transform: scale(0.8, 1.2);
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-ramen {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 4px;
+    padding: 0px;
+    text-align: center;
+  }
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 90px;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    padding: 0;
+    text-align: center;
+  }
+  .ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 100px;
+    margin: 0;
+    margin-top: 4px;
+    padding: 0 32px;
+    text-align: center;
+  }
   .ordering-system .order-sys-imgs-container .order-sys-imgs .right-arrow {
+    border-style: solid;
+    border-width: 1px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
     width: 20px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 /*# sourceMappingURL=home.css.map */

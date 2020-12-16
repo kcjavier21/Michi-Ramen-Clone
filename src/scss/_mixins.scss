@@ -9,6 +9,14 @@
     text-align: center;
 }
 
+@mixin absolutely-centered {
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+
 @mixin ordering-system-images($width, $left, $marginTop) {
     //position: absolute;
     width: $width;
@@ -35,7 +43,13 @@
 }
 
 @mixin tablet{
-    @media(max-width: 768px){
+    @media(max-width: 820px){
+        @content;
+    }
+}
+
+@mixin large-mobile{
+    @media(max-width: 535px){
         @content;
     }
 }

@@ -1,17 +1,16 @@
 @import './mixins';
 
 .nav-section {
-    @include add-testing-border();
+    //@include add-testing-border();
     background-image: url('../assets/images/wood.jpg');
+    background-position: center;
+    background-size: 120%;
     width: 100%;
     //min-width: 1920px;
 
     .navigation-bar {
         @include add-testing-border();
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgba(0, 0, 0, 0);
-
+    
         width: 1000px;
         height: 140px;
 
@@ -21,15 +20,17 @@
         position: sticky;
         margin: 0 auto;
 
+        max-width: 95%;
+
    
         .logo {
             @include add-testing-border();
             position: absolute;
+
             height: 100px;
             width: 100px;
-            top: 40px;
-            left: 40px;
-            //margin: 30px;
+
+            margin: 30px;
         }
 
         .navigation-bar-2 {
@@ -38,6 +39,12 @@
             text-align: center;
             
             margin: 84px auto;
+
+            max-width: 90%;
+
+            @include tablet {
+                display: none;
+            }
             
         }
 
@@ -56,6 +63,16 @@
 
             font-size: 20px;
 
+            
+
+            @include medium {
+                font-size: 16px;
+            }
+
+            @include tablet {
+                display: none;
+            }
+
         }
 
         .nav-menu {
@@ -68,7 +85,43 @@
             color: #ffff;
             font-weight: 700;
             font-size: 20px;
+
+            @include medium {
+                font-size: 16px;
+            }
         }
     }
 
+
+    #toggle-btn {
+        //@include add-testing-border();
+        right: 32px;
+        top: 52px;
+        transition:left 100ms linear 0ms,transform 200ms ease 100ms;
+        position: absolute;
+        display: none;
+       
+        @include tablet {
+            //visibility: visible;
+            display: block;
+        }
+    
+          span {
+            //position: relative;
+            top:0px;
+            display:block;
+            background:#ffff;
+            width:40px;
+            height:8px;
+            margin:5px 0px;
+            cursor:pointer;
+            transition: 0.3s ease-in-out;
+          }
+    
+    }
+
 }
+
+
+
+
