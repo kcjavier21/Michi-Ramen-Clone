@@ -200,23 +200,11 @@
 
 @media (max-width: 745px) {
   .ordering-system .how-to-order {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     width: 80%;
     margin-top: 40px;
     font-size: 32px;
   }
   .ordering-system .order-sys-imgs-container {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     width: 500px;
     max-width: 100%;
     margin-top: 32px;
@@ -227,18 +215,10 @@
     justify-items: center;
   }
   .ordering-system .order-sys-imgs-container .order-sys-imgs {
-    border-style: solid;
-    border-width: 1px;
     padding: 0;
     margin-top: 0;
   }
   .ordering-system .order-sys-imgs-container .order-sys-imgs p {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     font-family: Economica, sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -248,24 +228,12 @@
     margin-top: 20px;
   }
   .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-ramen {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     height: 100px;
     margin-bottom: 4px;
     padding: 0px;
     text-align: center;
   }
   .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     height: 90px;
     margin: 0;
     margin-top: 8px;
@@ -274,12 +242,6 @@
     text-align: center;
   }
   .ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     height: 100px;
     margin: 0;
     margin-top: 4px;
@@ -287,12 +249,6 @@
     text-align: center;
   }
   .ordering-system .order-sys-imgs-container .order-sys-imgs .right-arrow {
-    border-style: solid;
-    border-width: 1px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    margin: 0 auto;
-    text-align: center;
     margin-top: 20px;
     width: 20px;
     -webkit-transform: rotate(90deg);

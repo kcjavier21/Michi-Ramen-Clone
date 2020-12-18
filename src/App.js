@@ -4,7 +4,7 @@ import './App.css';
 
 //=== COMPONENTS ===
 import Home from './components/pages/home/home.jsx';
-import Menu from './components/pages/menu.jsx';
+import Menu from './components/pages/menu/menu.jsx';
 import Locations from './components/pages/locations.jsx';
 import About from './components/pages/about.jsx';
 import Email from './components/pages/email.jsx';

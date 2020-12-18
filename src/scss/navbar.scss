@@ -67,6 +67,9 @@
 
             @include medium {
                 font-size: 16px;
+                padding: 7px 14px;
+                right: 1vw;
+                
             }
 
             @include tablet {

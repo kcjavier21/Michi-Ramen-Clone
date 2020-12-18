@@ -185,9 +185,6 @@
     .ordering-system {
         
         .how-to-order {
-            @include add-testing-border();
-            @include center();
-    
             width: 80%;
             
             margin-top:40px;
@@ -195,29 +192,21 @@
         }
     
         .order-sys-imgs-container {
-            @include add-testing-border();
-            @include center();
-    
             width: 500px;
             max-width: 100%;
-            //height: 50vw;
+           
             margin-top: 32px;
            
             grid-template-columns: auto;
             grid-template-rows: 160px 70px 160px 70px 160px;
-            //grid-template-rows: 30px;
-            justify-items: center;
-                    
+           
+            justify-items: center;      
     
             .order-sys-imgs {   
-                @include add-testing-border();
                 padding: 0;
                 margin-top: 0;
     
                 p {
-                    @include add-testing-border();
-                    @include center();
-    
                     font-family: Economica, sans-serif;
                     font-size: 16px;
                     font-weight: 500;
@@ -228,9 +217,6 @@
                 }
     
                 .pick-ramen {
-                    @include add-testing-border();
-                    @include center();
-    
                     height: 100px;
                     margin-bottom: 4px;
                     padding: 0px;
@@ -239,9 +225,6 @@
                 }
             
                 .pick-broth {
-                    @include add-testing-border();
-                    @include center();
-    
                     height: 90px;
                     margin: 0;
                     margin-top: 8px;
@@ -252,9 +235,6 @@
                 }
             
                 .add-toppings {  
-                    @include add-testing-border();
-                    @include center();
-                    
                     height: 100px;
                     margin: 0;
                     margin-top: 4px;
@@ -263,9 +243,6 @@
                 }
     
                 .right-arrow {
-                    @include add-testing-border();
-                    @include center();
-    
                     margin-top: 20px;
                     width: 20px;
 

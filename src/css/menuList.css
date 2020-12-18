@@ -1,0 +1,93 @@
+.menu-list {
+  background-image: url("../assets/images/character_pattern_2X.jpg");
+  background-size: 100px;
+  height: 800px;
+  padding-top: 60px;
+}
+
+.menu-list .ramenBowls {
+  border-style: solid;
+  border-width: 1px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 40%;
+  margin-top: 0px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffff;
+}
+
+.menu-list .grid-menu-container {
+  border-style: solid;
+  border-width: 1px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto auto auto auto;
+      grid-template-rows: auto auto auto auto auto;
+  width: 1200px;
+  margin: 40px auto;
+}
+
+.menu-list .grid-menu-container .grid-menu-items {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+}
+
+.menu-list .grid-menu-container .grid-menu-items .category {
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  font-family: Economica, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  -webkit-transform: scale(1, 1.4);
+          transform: scale(1, 1.4);
+}
+
+.menu-list .grid-menu-container .grid-menu-items .price {
+  width: 30%;
+  font-family: Economica, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #e60033;
+  margin-top: 30px;
+}
+
+.menu-list .grid-menu-container .grid-menu-items .chashus ul {
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+  margin-top: 10px;
+}
+
+.menu-list .grid-menu-container .grid-menu-items .chashus ul li {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.menu-list .grid-menu-container .grid-menu-items .toppings ul {
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+  margin-top: 30px;
+}
+
+.menu-list .grid-menu-container .grid-menu-items .toppings ul li {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.menu-list .grid-menu-container .grid-menu-items .bowls {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-family: Walter Turncoat, cursive;
+}
+/*# sourceMappingURL=menuList.css.map */
