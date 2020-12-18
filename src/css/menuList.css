@@ -1,8 +1,7 @@
 .menu-list {
   background-image: url("../assets/images/character_pattern_2X.jpg");
   background-size: 100px;
-  height: 800px;
-  padding-top: 60px;
+  padding: 60px;
 }
 
 .menu-list .ramenBowls {

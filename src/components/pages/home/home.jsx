@@ -12,7 +12,7 @@ export default class Home extends Component {
             <React.Fragment>
                 <Hero/>
                 <HowToOrder/>
-                <MenuList/>
+                <MenuList menuItems={this.props.menuItems}/>
             </React.Fragment>
         )
     }

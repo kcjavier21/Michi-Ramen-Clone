@@ -58,10 +58,6 @@ const ramenBowls = [
     
 ];
 
-export function getRamenCategories(id) {
-    return ramenBowls.filter(r => r.id === id)
-}
-
 export function getRamenCategories() {
-    return ramenBowls.filter(r => r)
+    return ramenBowls;
 }

@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.png';
 
 
 
-class NavBar extends Component {
+class NavBar extends Component {  
     render() { 
         return (
             <React.Fragment>
