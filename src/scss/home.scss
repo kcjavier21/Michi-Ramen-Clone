@@ -1,7 +1,7 @@
 @import './mixins';
 
 .hero{
-    height: 800px;
+    height: 860px;
     width: 100%;
     background-image: url('../assets/images/wood.jpg');
     background-position: center;
@@ -11,7 +11,12 @@
     position: relative;
 
     @include medium {
-        max-height: 90vw;
+        max-height: 80vw;
+    }
+
+    @include large-mobile {
+
+        max-height: 132vw;   
     }
 
     
@@ -257,3 +262,8 @@
     }
 
 }
+
+
+
+
+

@@ -8,6 +8,11 @@
     width: 100%;
     //min-width: 1920px;
 
+    @include large-mobile {
+        height: 28vw;
+        
+    }
+
     .navigation-bar {
         @include add-testing-border();
     
@@ -31,6 +36,16 @@
             width: 100px;
 
             margin: 30px;
+
+            @include large-mobile {
+                height: 80px;
+                width: 80px;
+                
+                max-height: 20vw;
+                max-width: 20vw;
+
+                margin: 5vw;
+            }
         }
 
         .navigation-bar-2 {
@@ -45,6 +60,8 @@
             @include tablet {
                 display: none;
             }
+
+            
             
         }
 
@@ -92,6 +109,7 @@
             @include medium {
                 font-size: 16px;
             }
+            
         }
     }
 
@@ -108,6 +126,11 @@
             //visibility: visible;
             display: block;
         }
+
+        @include large-mobile {
+            right: 5vw;
+            top: 10vw;
+        }
     
           span {
             //position: relative;
@@ -119,6 +142,15 @@
             margin:5px 0px;
             cursor:pointer;
             transition: 0.3s ease-in-out;
+
+            @include large-mobile {
+                height: 6px;
+                width: 32px;
+                // max-height: 20vw;
+                // max-width: 20vw;
+
+                // margin: 5vw;
+            }
           }
     
     }

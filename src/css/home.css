@@ -1,5 +1,5 @@
 .hero {
-  height: 800px;
+  height: 860px;
   width: 100%;
   background-image: url("../assets/images/wood.jpg");
   background-position: center;
@@ -10,7 +10,13 @@
 
 @media (max-width: 1024px) {
   .hero {
-    max-height: 90vw;
+    max-height: 80vw;
+  }
+}
+
+@media (max-width: 535px) {
+  .hero {
+    max-height: 132vw;
   }
 }
 

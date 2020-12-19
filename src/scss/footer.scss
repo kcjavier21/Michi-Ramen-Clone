@@ -1,0 +1,57 @@
+@import './mixins';
+
+.footer {
+    background-color: rgb(68, 58, 46);
+    padding: 40px 0;
+
+    .footer-grid {
+        @include add-testing-border();
+        //height: 400px;
+        width: 1500px;
+
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+
+        margin: 0 auto;
+        max-width: 90%;
+        
+    
+        .footer-grid-item {
+            @include add-testing-border();
+            //background-color: rgb(138, 86, 30);
+            text-align: center;
+            color: #ffff;
+
+            p {
+                margin-bottom: 20px;
+                font-size: 20px;
+
+                @include tablet() {
+                    font-size: 16px;
+                }
+            }
+
+            .btn-order-online {
+                //@include add-testing-border();
+    
+                background-color: rgb(255, 194, 39);
+                padding: 8px 24px;
+                border-radius: 4px;
+            
+                color: white;
+                font-weight: bold;
+            
+                font-size: 20px;
+
+                @include tablet() {
+                    padding: 6px 20px;
+                    font-size: 16px;
+                }
+            }
+    
+        }
+    }
+    
+
+}
+

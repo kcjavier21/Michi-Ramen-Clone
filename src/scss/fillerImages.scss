@@ -1,0 +1,18 @@
+@import './mixins';
+
+.filler-imgs-container {
+    //@include add-testing-border();
+    width: 100%;
+    display: grid;
+    padding: 0;
+    margin: 10vw auto 0 auto;
+    grid-template-columns: repeat(3, auto);
+
+    .filler-imgs {
+        //@include add-testing-border();
+        padding: 0;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -2,97 +2,131 @@
 .menu-list {
     background-image: url('../assets/images/character_pattern_2X.jpg');
     background-size: 100px;
-    //height: 800px;
-
-    padding: 60px;
+    //width: 100%;
+    padding: 60px 0;
 
 
     .ramenBowls {
         @include add-testing-border();
             @include center();
 
-            width: 40%;
+            width: 1000px;
             
             margin-top:0px;
 
             font-size: 60px;
             font-weight: 700;
             color: #ffff;
+
+            max-width: 100%;
     }
 
     .grid-menu-container {
         @include add-testing-border();
         display: grid;
 
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto auto;
-        width: 1200px;
+        grid-template-columns: 6fr 6fr;
+        grid-template-rows: repeat(5, auto);
+        grid-row-gap: 40px;
+
+        width: 1000px;
         margin: 40px auto;
+
+        max-width: 96%;
+
+        @include tablet {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(9, auto);
+            
+            width: 500px;
+            max-width: 96%;
+        }
     
     .grid-menu-items {
         @include add-testing-border();
         padding: 10px;
+        
 
         .category {
             @include add-testing-border();
-            width: 50%;
             font-family: Economica, sans-serif;
             font-size: 36px;
             font-weight: 300;
             transform: scale(1, 1.4);
+
+            @include tablet {
+                font-size: 30px;
+            }
         }
 
         .price {
-            //@include add-testing-border();
-            width: 30%;
+            @include add-testing-border();
             font-family: Economica, sans-serif;
             font-size: 28px;
             font-weight: 300;
             color: #e60033;
             margin-top: 30px;
+
+            @include tablet {
+                font-size: 24px;
+            }
         }
 
         .chashus {
-            ul {
-                //@include add-testing-border();
-                list-style-type: none;
-                font-size: 20px;
-                font-weight: 600;
-                color: #ffff;
-                margin-top: 10px; 
-                
-                li {
-                    //@include add-testing-border();
-                    font-size: 20px;
-                    margin-top: 2px;
-                }
+            //@include add-testing-border();
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffff;
+            text-shadow: 2px 2px rgba(0,0,0,.5);
+            margin-top: 10px; 
+
+            @include tablet {
+                font-size: 16px;
             }
-            
+                
+            li {
+                margin-top: 2px;
+                text-shadow: 2px 2px rgba(0,0,0,.5);
+            }
+ 
         }
 
         .toppings {
-            ul {
-                //@include add-testing-border();
-                list-style-type: none;
-                font-size: 20px;
-                font-weight: 600;
-                color: #ffff;
-                margin-top: 30px;
+            //@include add-testing-border();
+            list-style-type: none;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffff;
+            margin-top: 30px;
+            text-shadow: 2px 2px rgba(0,0,0,.5);
+
+            @include tablet {
+                font-size: 16px;
+            }
                 
-                li {
-                    //@include add-testing-border();
-                    font-size: 20px;
-                    margin-top: 2px;
-                }
+            li {
+                margin-top: 2px;
+                text-shadow: 2px 2px rgba(0,0,0,.5);
             }
             
         }
 
         .bowls {
+            @include add-testing-border();
             font-size: 24px;
             margin-top: 20px;
             font-weight: 600;
             font-family: Walter Turncoat, cursive;
+           
+
+            @include tablet {
+                font-size: 20px;
+            }
+
+            li {
+                list-style-type: none;
+            }
         }
 
     }

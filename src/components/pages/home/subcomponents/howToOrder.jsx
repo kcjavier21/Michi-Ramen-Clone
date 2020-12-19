@@ -25,7 +25,6 @@ export default class HowToOrder extends Component {
 
     render() {
         return (
-            <div>
                 <div className="ordering-system-container">
                     <div className="ordering-system">
                         <h1 className="how-to-order">HOW TO ORDER</h1>                       
@@ -34,7 +33,6 @@ export default class HowToOrder extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }

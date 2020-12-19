@@ -11,6 +11,7 @@ import Email from './components/pages/email.jsx';
 import NotFound from './components/pages/not-found.jsx';
 
 import NavBar from './components/commons/navbar.jsx';
+import Footer from './components/commons/footer.jsx';
 
 import { getRamenCategories } from './data/ramenCategories';
 
@@ -45,6 +46,7 @@ export default class App extends Component {
                 <Redirect from="/home" exact to="/"/>
                 <Redirect to="/not-found"/>
             </Switch>
+           <Footer/> 
           </div>
       </div>
     )
