@@ -7,7 +7,7 @@
 
 
     .ramenBowls {
-        @include add-testing-border();
+        //@include add-testing-border();
             @include center();
 
             width: 1000px;
@@ -22,7 +22,7 @@
     }
 
     .grid-menu-container {
-        @include add-testing-border();
+        //@include add-testing-border();
         display: grid;
 
         grid-template-columns: 6fr 6fr;
@@ -43,12 +43,12 @@
         }
     
     .grid-menu-items {
-        @include add-testing-border();
+        //@include add-testing-border();
         padding: 10px;
         
 
         .category {
-            @include add-testing-border();
+            //@include add-testing-border();
             font-family: Economica, sans-serif;
             font-size: 36px;
             font-weight: 300;
@@ -60,7 +60,7 @@
         }
 
         .price {
-            @include add-testing-border();
+            //@include add-testing-border();
             font-family: Economica, sans-serif;
             font-size: 28px;
             font-weight: 300;
@@ -73,7 +73,7 @@
         }
 
         .chashus {
-            //@include add-testing-border();
+            ////@include add-testing-border();
             list-style-type: none;
             font-size: 20px;
             font-weight: 600;
@@ -93,7 +93,7 @@
         }
 
         .toppings {
-            //@include add-testing-border();
+            ////@include add-testing-border();
             list-style-type: none;
             font-size: 20px;
             font-weight: 600;
@@ -113,7 +113,7 @@
         }
 
         .bowls {
-            @include add-testing-border();
+            //@include add-testing-border();
             font-size: 24px;
             margin-top: 20px;
             font-weight: 600;

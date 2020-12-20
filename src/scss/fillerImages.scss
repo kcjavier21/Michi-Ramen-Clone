@@ -8,6 +8,12 @@
     margin: 10vw auto 0 auto;
     grid-template-columns: repeat(3, auto);
 
+    @include tablet() {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+        margin: 0 auto;
+    }
+
     .filler-imgs {
         //@include add-testing-border();
         padding: 0;

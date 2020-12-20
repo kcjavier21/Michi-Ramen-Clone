@@ -4,8 +4,6 @@ import '../../../../css/menuList.css';
 export default class MenuList extends Component {
     
     createMenuItem = (id, type, price, chashus, toppings, bowls) => {
-        console.log(id);
-
        return <div className="grid-menu-items" key={id}>                        
                         <h2 className="category">{`${type.toUpperCase()}`}</h2>
                         <p className="price">{`${price}`}</p>
@@ -26,20 +24,17 @@ export default class MenuList extends Component {
 
     render() {
         const { menuItems } = this.props;
-        //const { _id, type, price, chashu, toppings, bowls } = this.props.menuItems;
 
         return (
             <React.Fragment>
                 <div className="menu-list">
                     <h1 className="ramenBowls">RAMEN BOWLS</h1>
                 
-                
                  <div className="grid-menu-container">
                  { menuItems.map(item => this.createMenuItem(item._id, item.type, item.price, item.chashu, item.toppings, item.bowls)) }
                     
                 </div>
-                
-                
+        
                 </div>
             </React.Fragment>
         )

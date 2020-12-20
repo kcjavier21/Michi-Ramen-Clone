@@ -1,8 +1,16 @@
 .nav-section {
-  background-image: url("../assets/images/wood.jpg");
+  background-color: transparent;
   background-position: center;
   background-size: 120%;
   width: 100%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.nav-section.active {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  background-color: #433d3c;
 }
 
 @media (max-width: 535px) {
@@ -14,6 +22,7 @@
 .nav-section .navigation-bar {
   border-style: solid;
   border-width: 1px;
+  border-color: rgba(0, 0, 0, 0);
   width: 1000px;
   height: 140px;
   -webkit-box-pack: center;
@@ -27,8 +36,6 @@
 }
 
 .nav-section .navigation-bar .logo {
-  border-style: solid;
-  border-width: 1px;
   position: absolute;
   height: 100px;
   width: 100px;
@@ -46,8 +53,6 @@
 }
 
 .nav-section .navigation-bar .navigation-bar-2 {
-  border-style: solid;
-  border-width: 1px;
   width: 50%;
   text-align: center;
   margin: 84px auto;
@@ -61,8 +66,6 @@
 }
 
 .nav-section .navigation-bar .btn-order-online {
-  border-style: solid;
-  border-width: 1px;
   background-color: #ffc227;
   padding: 8px 24px;
   border-radius: 4px;
@@ -89,8 +92,6 @@
 }
 
 .nav-section .navigation-bar .nav-menu {
-  border-style: solid;
-  border-width: 1px;
   text-decoration: none;
   padding: 0 20px 0 20px;
   -ms-flex-item-align: center;
@@ -99,6 +100,16 @@
   color: #ffff;
   font-weight: 700;
   font-size: 20px;
+}
+
+.nav-section .navigation-bar .nav-menu:hover {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  color: #ffc227;
+}
+
+.nav-section .navigation-bar .nav-menu.active {
+  color: #ffc227;
 }
 
 @media (max-width: 1024px) {
@@ -148,5 +159,11 @@
     height: 6px;
     width: 32px;
   }
+}
+
+.active {
+  -webkit-transition: 0.3ms;
+  transition: 0.3ms;
+  background-color: #483d22;
 }
 /*# sourceMappingURL=navbar.css.map */

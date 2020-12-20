@@ -5,11 +5,23 @@ import logo from '../../assets/images/logo.png';
 
 
 
-class NavBar extends Component {  
+class NavBar extends Component { 
+    getNavClass = () => {
+        let theClass = this.props.scrollPosition >= 0.03 ? 'active' : '';
+        return theClass;
+    };
+
+    getMenuClass = () => {
+        let theClass = 'nav-menu active';
+        return theClass;
+    };
+
     render() { 
+        let navClass = this.getNavClass();
+
         return (
             <React.Fragment>
-                <div className="nav-section">
+                <div className={`nav-section ${navClass}`}>
                     <nav className="navigation-bar">
                         <NavLink to="/">
                             <img src={logo} className="logo" alt="Logo"/>
@@ -27,6 +39,7 @@ class NavBar extends Component {
                             <NavLink to="/about" className="nav-menu">ABOUT</NavLink>
                             <NavLink to="/email" className="nav-menu">EMAIL</NavLink>
                         </div>
+
                         <button type="button" className="btn-order-online">ORDER ONLINE</button>
                     </nav>
                 </div>

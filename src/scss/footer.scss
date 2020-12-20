@@ -1,23 +1,29 @@
 @import './mixins';
 
 .footer {
-    background-color: rgb(68, 58, 46);
+    background-color: #433d3c;
     padding: 40px 0;
 
     .footer-grid {
-        @include add-testing-border();
+        //@include add-testing-border();
         //height: 400px;
-        width: 1500px;
+        width: 1300px;
 
         display: grid;
         grid-template-columns: repeat(3, auto);
 
         margin: 0 auto;
         max-width: 90%;
+
+        @include tablet() {
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, auto);
+            grid-gap: 40px;
+        }
+
         
-    
         .footer-grid-item {
-            @include add-testing-border();
+            //@include add-testing-border();
             //background-color: rgb(138, 86, 30);
             text-align: center;
             color: #ffff;
@@ -55,3 +61,8 @@
 
 }
 
+.font-icon {
+    color: rgb(255, 194, 39);
+    margin: 8px;
+    font-size: 32px;
+}

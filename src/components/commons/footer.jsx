@@ -2,12 +2,16 @@ import React from 'react';
 
 import '../../css/footer.css';
 
+
 const Footer = () => {
     return (
         <div className="footer">
          <div className="footer-grid">
              <div className="footer-grid-item">
-                 <button type="button" className="btn-order-online">ORDER ONLINE</button>
+                <i className="fa fa-yelp font-icon"></i>
+                <i className="fa fa-twitter font-icon"></i>
+                <i className="fa fa-facebook font-icon"></i>
+                <i className="fa fa-instagram font-icon"></i>
              </div>
              
              <div className="footer-grid-item">
@@ -22,6 +26,12 @@ const Footer = () => {
                 <p>
                     Anderson Mill • Take-out & Delivery <br/>
                     (512) 953-8143 • 10700 Anderson Mill #109 78750
+                </p>
+                <p>
+                    Clone created by Ken Javier <br/>
+                    Visit the original website at <br/>
+                    https://michiramen.com/<br/>
+                    © Michi Ramen
                 </p>
              </div>
 

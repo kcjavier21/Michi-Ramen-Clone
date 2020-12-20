@@ -6,7 +6,9 @@
     background-image: url('../assets/images/wood.jpg');
     background-position: center;
     background-size: 120%;
-    padding-top: 10px;
+    padding-top: 150px;
+
+    transform: translate(0, -150px);
 
     position: relative;
 
@@ -21,7 +23,7 @@
 
     
     .title{
-        @include add-testing-border();
+        //@include add-testing-border();
         @include center();
         
         width: 800px;
@@ -42,12 +44,13 @@
 
         @include large-mobile {
             margin-top: 12vw;
+            font-size: 40px;
         }
 
     }
 
     .tagline {
-        @include add-testing-border();
+        //@include add-testing-border();
         @include center();
 
         width: 800px;
@@ -68,7 +71,7 @@
     
         
         .bowl {
-            @include add-testing-border();
+            //@include add-testing-border();
             @include absolutely-centered;
             position: absolute;
             bottom: 0;
@@ -86,14 +89,14 @@
 }
 
 .ordering-system {
-    @include add-testing-border();
+    //@include add-testing-border();
     width: 1200px;
     padding: 0;
     margin: 0 auto;
     max-width: 100%;
     
     .how-to-order {
-        @include add-testing-border();
+        //@include add-testing-border();
         @include center();
 
         width: 40%;
@@ -106,7 +109,7 @@
     }
 
     .order-sys-imgs-container {
-        @include add-testing-border();
+        //@include add-testing-border();
         @include center();
 
         width: 90%;
@@ -119,12 +122,12 @@
                 
 
         .order-sys-imgs {   
-            @include add-testing-border();
+            //@include add-testing-border();
             padding: 0;
             margin-top: 0;
 
             p {
-                @include add-testing-border();
+                //@include add-testing-border();
                 @include center();
 
                 font-family: Economica, sans-serif;
@@ -137,7 +140,7 @@
             }
 
             .pick-ramen {
-                @include add-testing-border();
+                //@include add-testing-border();
                 @include center();
 
                 height: 120px;
@@ -148,7 +151,7 @@
             }
         
             .pick-broth {
-                @include add-testing-border();
+                //@include add-testing-border();
                 @include center();
 
                 height: 112px;
@@ -161,7 +164,7 @@
             }
         
             .add-toppings {  
-                @include add-testing-border();
+                //@include add-testing-border();
                 @include center();
                 
                 height: 120px;
@@ -172,7 +175,7 @@
             }
 
             .right-arrow {
-                @include add-testing-border();
+                //@include add-testing-border();
                 @include center();
 
                 margin-top: 72px;

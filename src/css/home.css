@@ -4,7 +4,9 @@
   background-image: url("../assets/images/wood.jpg");
   background-position: center;
   background-size: 120%;
-  padding-top: 10px;
+  padding-top: 150px;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
   position: relative;
 }
 
@@ -21,8 +23,6 @@
 }
 
 .hero .title {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -45,12 +45,11 @@
 @media (max-width: 535px) {
   .hero .title {
     margin-top: 12vw;
+    font-size: 40px;
   }
 }
 
 .hero .tagline {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -70,8 +69,6 @@
 }
 
 .hero .bowl {
-  border-style: solid;
-  border-width: 1px;
   margin: auto;
   left: 0;
   right: 0;
@@ -89,8 +86,6 @@
 }
 
 .ordering-system {
-  border-style: solid;
-  border-width: 1px;
   width: 1200px;
   padding: 0;
   margin: 0 auto;
@@ -98,8 +93,6 @@
 }
 
 .ordering-system .how-to-order {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -112,8 +105,6 @@
 }
 
 .ordering-system .order-sys-imgs-container {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -129,15 +120,11 @@
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs {
-  border-style: solid;
-  border-width: 1px;
   padding: 0;
   margin-top: 0;
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs p {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -152,8 +139,6 @@
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-ramen {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -165,8 +150,6 @@
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .pick-broth {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -180,8 +163,6 @@
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .add-toppings {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;
@@ -194,8 +175,6 @@
 }
 
 .ordering-system .order-sys-imgs-container .order-sys-imgs .right-arrow {
-  border-style: solid;
-  border-width: 1px;
   -ms-grid-column-align: center;
       justify-self: center;
   margin: 0 auto;

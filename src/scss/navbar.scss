@@ -2,19 +2,29 @@
 
 .nav-section {
     //@include add-testing-border();
-    background-image: url('../assets/images/wood.jpg');
+    //background-image: url('../assets/images/wood.jpg');
+    background-color: transparent;
     background-position: center;
     background-size: 120%;
     width: 100%;
-    //min-width: 1920px;
+    transition: 200ms;
+
+
+    &.active {
+        transition: 300ms;
+        background-color: #433d3c;
+        
+    }
 
     @include large-mobile {
         height: 28vw;
         
-    }
+    } 
 
     .navigation-bar {
-        @include add-testing-border();
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0, 0, 0, 0);
     
         width: 1000px;
         height: 140px;
@@ -29,7 +39,7 @@
 
    
         .logo {
-            @include add-testing-border();
+            //@include add-testing-border();
             position: absolute;
 
             height: 100px;
@@ -49,7 +59,7 @@
         }
 
         .navigation-bar-2 {
-            @include add-testing-border();
+            //@include add-testing-border();
             width: 50%;
             text-align: center;
             
@@ -66,7 +76,7 @@
         }
 
         .btn-order-online {
-            @include add-testing-border();
+            //@include add-testing-border();
             
             background-color: rgb(255, 194, 39);
             padding: 8px 24px;
@@ -96,7 +106,7 @@
         }
 
         .nav-menu {
-            @include add-testing-border();
+            //@include add-testing-border();
             
             text-decoration: none;
             padding: 0 20px 0 20px;
@@ -105,6 +115,15 @@
             color: #ffff;
             font-weight: 700;
             font-size: 20px;
+
+            &:hover {
+                transition: 300ms;
+                color: #ffc227;
+            }
+
+            &.active {
+                color: #ffc227;
+            }
 
             @include medium {
                 font-size: 16px;
@@ -157,6 +176,11 @@
 
 }
 
+
+.active {
+    transition: 0.3ms;
+    background-color: rgb(72, 61, 34);
+}
 
 
 

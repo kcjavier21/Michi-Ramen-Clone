@@ -8,6 +8,16 @@
       grid-template-columns: repeat(3, auto);
 }
 
+@media (max-width: 820px) {
+  .filler-imgs-container {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (auto)[3];
+        grid-template-rows: repeat(3, auto);
+    margin: 0 auto;
+  }
+}
+
 .filler-imgs-container .filler-imgs {
   padding: 0;
 }

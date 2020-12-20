@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from "react-router-dom";
+import Sticky from 'react-stickynode';
+// /import Overlay from 'react-overlay-component';
 import './App.css';
 
 //=== COMPONENTS ===
@@ -15,10 +17,10 @@ import Footer from './components/commons/footer.jsx';
 
 import { getRamenCategories } from './data/ramenCategories';
 
-
 export default class App extends Component {
   state = {
-    menuItems: getRamenCategories()
+    menuItems: getRamenCategories(),
+    theposition: 0
   };
 
   // ===== MOUNTING =====
@@ -28,13 +30,38 @@ export default class App extends Component {
     //   this.setState({ menuItems: data });
     // };
 
+    componentDidMount() {
+      window.addEventListener('scroll', this.listenToScroll)
+    }
+    
+    componentWillUnmount() {
+      window.removeEventListener('scroll', this.listenToScroll)
+    }
+    
+    listenToScroll = () => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop
+    
+      const height =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+      const scrolled = winScroll / height;
+    
+      this.setState({
+        theposition: scrolled,
+      })
+    }
+
   render() {
-    console.log(this.state.menuItems);
     return (
       <div>
-          
           <div className="content">
-          <NavBar/>
+          
+               <Sticky innerZ={5}>
+                <NavBar scrollPosition={this.state.theposition} />
+              </Sticky>
+       
+          {/* <Navigation/> */}
             <Switch>
                 <Route path="/" exact render={(props) => <Home menuItems={this.state.menuItems}/>}/>
                 <Route path="/menu" exact render={(props) => <Menu menuItems={this.state.menuItems}/>} />
