@@ -2,7 +2,10 @@
 
 .footer {
     background-color: #433d3c;
-    padding: 40px 0;
+    //@include add-testing-border();
+    margin: 120px 0 0 0;
+    transform: translate(0, -150px);
+    
 
     .footer-grid {
         //@include add-testing-border();
@@ -65,4 +68,10 @@
     color: rgb(255, 194, 39);
     margin: 8px;
     font-size: 32px;
+    cursor: pointer;
+
+    &:hover {
+        transition: 300ms;
+        color: #ffff;
+    }
 }

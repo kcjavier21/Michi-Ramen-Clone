@@ -20,6 +20,7 @@ import { getRamenCategories } from './data/ramenCategories';
 export default class App extends Component {
   state = {
     menuItems: getRamenCategories(),
+    currentPath: '',
     theposition: 0
   };
 
@@ -31,11 +32,13 @@ export default class App extends Component {
     // };
 
     componentDidMount() {
-      window.addEventListener('scroll', this.listenToScroll)
+      window.addEventListener('scroll', this.listenToScroll);
+      window.addEventListener('click', this.listenToLoad);
     }
     
     componentWillUnmount() {
-      window.removeEventListener('scroll', this.listenToScroll)
+      window.removeEventListener('scroll', this.listenToScroll);
+      window.removeEventListener('click', this.listenToLoad);
     }
     
     listenToScroll = () => {
@@ -52,13 +55,26 @@ export default class App extends Component {
       })
     }
 
+    listenToLoad = () => {
+      const pagePath = window.location.pathname;
+
+      this.setState({ currentPath: pagePath });
+    }
+    
+
   render() {
+
+ 
+    
     return (
       <div>
           <div className="content">
           
                <Sticky innerZ={5}>
-                <NavBar scrollPosition={this.state.theposition} />
+                <NavBar 
+                  scrollPosition={this.state.theposition}
+                  currentPath={this.state.currentPath}
+                />
               </Sticky>
        
           {/* <Navigation/> */}

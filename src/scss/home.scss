@@ -7,6 +7,7 @@
     background-position: center;
     background-size: 120%;
     padding-top: 150px;
+    margin-bottom: 0;
 
     transform: translate(0, -150px);
 
@@ -18,7 +19,7 @@
 
     @include large-mobile {
 
-        max-height: 132vw;   
+        max-height: 152vw;   
     }
 
     
@@ -86,6 +87,9 @@
     //min-width: 2500px; 
     padding: 20px 0 100px 0;
     margin: 0px;
+
+    transform: translate(0, -150px);
+    
 }
 
 .ordering-system {
@@ -94,6 +98,7 @@
     padding: 0;
     margin: 0 auto;
     max-width: 100%;
+    
     
     .how-to-order {
         //@include add-testing-border();
@@ -189,7 +194,13 @@
     
 }
 
+
 @media(max-width: 745px){
+    .ordering-system-container {
+    padding: 20px 0 50px 0;
+   
+    
+    }
     .ordering-system {
         
         .how-to-order {

@@ -4,9 +4,11 @@
     //@include add-testing-border();
     width: 100%;
     display: grid;
-    padding: 0;
-    margin: 10vw auto 0 auto;
+    background-color: #ffff;
+    margin: 0 auto;
     grid-template-columns: repeat(3, auto);
+    padding-top: 140px;
+    transform: translate(0, -150px);
 
     @include tablet() {
         grid-template-columns: auto;

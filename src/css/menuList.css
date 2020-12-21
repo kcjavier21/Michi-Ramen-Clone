@@ -2,6 +2,8 @@
   background-image: url("../assets/images/character_pattern_2X.jpg");
   background-size: 100px;
   padding: 60px 0;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
 }
 
 .menu-list .ramenBowls {

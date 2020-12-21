@@ -2,10 +2,13 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  padding: 0;
-  margin: 10vw auto 0 auto;
+  background-color: #ffff;
+  margin: 0 auto;
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
+  padding-top: 140px;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
 }
 
 @media (max-width: 820px) {

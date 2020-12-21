@@ -1,6 +1,8 @@
 .footer {
   background-color: #433d3c;
-  padding: 40px 0;
+  margin: 120px 0 0 0;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
 }
 
 .footer .footer-grid {
@@ -59,5 +61,12 @@
   color: #ffc227;
   margin: 8px;
   font-size: 32px;
+  cursor: pointer;
+}
+
+.font-icon:hover {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  color: #ffff;
 }
 /*# sourceMappingURL=footer.css.map */

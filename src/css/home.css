@@ -5,6 +5,7 @@
   background-position: center;
   background-size: 120%;
   padding-top: 150px;
+  margin-bottom: 0;
   -webkit-transform: translate(0, -150px);
           transform: translate(0, -150px);
   position: relative;
@@ -18,7 +19,7 @@
 
 @media (max-width: 535px) {
   .hero {
-    max-height: 132vw;
+    max-height: 152vw;
   }
 }
 
@@ -83,6 +84,8 @@
   background-image: url("../assets/images/texture_pattern_2X.jpg");
   padding: 20px 0 100px 0;
   margin: 0px;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
 }
 
 .ordering-system {
@@ -184,6 +187,9 @@
 }
 
 @media (max-width: 745px) {
+  .ordering-system-container {
+    padding: 20px 0 50px 0;
+  }
   .ordering-system .how-to-order {
     width: 80%;
     margin-top: 40px;

@@ -7,7 +7,15 @@ import logo from '../../assets/images/logo.png';
 
 class NavBar extends Component { 
     getNavClass = () => {
-        let theClass = this.props.scrollPosition >= 0.03 ? 'active' : '';
+        let theClass = '';
+        
+        if(this.props.currentPath === '/')
+            theClass = this.props.scrollPosition >= 0.03 ? 'active' : '';
+        else
+            theClass = 'active';
+        
+
+        console.log(theClass);
         return theClass;
     };
 
@@ -16,8 +24,15 @@ class NavBar extends Component {
         return theClass;
     };
 
+    hendlePageChange = (page) => {
+        return 'hello';
+    };
+    
+
     render() { 
         let navClass = this.getNavClass();
+
+        
 
         return (
             <React.Fragment>

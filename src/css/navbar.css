@@ -8,8 +8,8 @@
 }
 
 .nav-section.active {
-  -webkit-transition: 300ms;
-  transition: 300ms;
+  -webkit-transition: 200ms;
+  transition: 200ms;
   background-color: #433d3c;
 }
 

@@ -8,12 +8,12 @@
     background-size: 120%;
     width: 100%;
     transition: 200ms;
+    //transform: translate(0, -150px);
 
 
     &.active {
-        transition: 300ms;
+        transition: 200ms;
         background-color: #433d3c;
-        
     }
 
     @include large-mobile {
