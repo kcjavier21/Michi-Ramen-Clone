@@ -1,15 +1,15 @@
 @import './mixins';
+@import './variables';
 
 .nav-section {
     //@include add-testing-border();
-    //background-image: url('../assets/images/wood.jpg');
     background-color: transparent;
     background-position: center;
     background-size: 120%;
     width: 100%;
     transition: 200ms;
-    //transform: translate(0, -150px);
-
+    // transform: translate(0, 550px);
+    position: sticky;
 
     &.active {
         transition: 200ms;
@@ -22,6 +22,7 @@
     } 
 
     .navigation-bar {
+        //@include add-testing-border();
         border-style: solid;
         border-width: 1px;
         border-color: rgba(0, 0, 0, 0);
@@ -45,7 +46,7 @@
             height: 100px;
             width: 100px;
 
-            margin: 30px;
+            margin: 21px 48px;
 
             @include large-mobile {
                 height: 80px;
@@ -69,16 +70,13 @@
 
             @include tablet {
                 display: none;
-            }
-
-            
-            
+            } 
         }
 
         .btn-order-online {
             //@include add-testing-border();
             
-            background-color: rgb(255, 194, 39);
+            background-color: $highlight-color;
             padding: 8px 24px;
             border-radius: 4px;
 
@@ -165,21 +163,9 @@
             @include large-mobile {
                 height: 6px;
                 width: 32px;
-                // max-height: 20vw;
-                // max-width: 20vw;
-
-                // margin: 5vw;
             }
           }
-    
     }
-
-}
-
-
-.active {
-    transition: 0.3ms;
-    background-color: rgb(72, 61, 34);
 }
 
 

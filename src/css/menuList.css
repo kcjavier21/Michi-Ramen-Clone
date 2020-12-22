@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
 .menu-list {
   background-image: url("../assets/images/character_pattern_2X.jpg");
   background-size: 100px;
@@ -77,6 +78,7 @@
 
 .menu-list .grid-menu-container .grid-menu-items .chashus {
   list-style-type: none;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: #ffff;
@@ -97,6 +99,7 @@
 
 .menu-list .grid-menu-container .grid-menu-items .toppings {
   list-style-type: none;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: #ffff;
@@ -118,8 +121,7 @@
 .menu-list .grid-menu-container .grid-menu-items .bowls {
   font-size: 24px;
   margin-top: 20px;
-  font-weight: 600;
-  font-family: Walter Turncoat, cursive;
+  font-family: 'Walter Turncoat', cursive;
 }
 
 @media (max-width: 820px) {

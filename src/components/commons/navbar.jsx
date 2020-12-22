@@ -7,15 +7,13 @@ import logo from '../../assets/images/logo.png';
 
 class NavBar extends Component { 
     getNavClass = () => {
-        let theClass = '';
+        let theClass = 'active';
         
         if(this.props.currentPath === '/')
             theClass = this.props.scrollPosition >= 0.03 ? 'active' : '';
         else
             theClass = 'active';
-        
 
-        console.log(theClass);
         return theClass;
     };
 
@@ -24,19 +22,14 @@ class NavBar extends Component {
         return theClass;
     };
 
-    hendlePageChange = (page) => {
-        return 'hello';
-    };
-    
-
     render() { 
         let navClass = this.getNavClass();
-
-        
+        let bgStyle = {};
+        bgStyle = this.props.currentPath !== '/' ? { backgroundColor: "#433d3c" } : { };
 
         return (
             <React.Fragment>
-                <div className={`nav-section ${navClass}`}>
+                <div className={`nav-section ${navClass}`} style={bgStyle}>
                     <nav className="navigation-bar">
                         <NavLink to="/">
                             <img src={logo} className="logo" alt="Logo"/>

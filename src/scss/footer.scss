@@ -2,21 +2,23 @@
 
 .footer {
     background-color: #433d3c;
-    //@include add-testing-border();
-    margin: 120px 0 0 0;
+    padding: 60px;
     transform: translate(0, -150px);
+    font-family: "Montserrat", sans-serif;
     
-
     .footer-grid {
         //@include add-testing-border();
-        //height: 400px;
+        @include absolutely-centered;
         width: 1300px;
 
         display: grid;
         grid-template-columns: repeat(3, auto);
-
+        top: 10px;
         margin: 0 auto;
-        max-width: 90%;
+        padding: 40px;
+        max-width: 70%;
+
+        position: absolute;
 
         @include tablet() {
             grid-template-columns: auto;
@@ -27,7 +29,6 @@
         
         .footer-grid-item {
             //@include add-testing-border();
-            //background-color: rgb(138, 86, 30);
             text-align: center;
             color: #ffff;
 
@@ -42,7 +43,6 @@
 
             .btn-order-online {
                 //@include add-testing-border();
-    
                 background-color: rgb(255, 194, 39);
                 padding: 8px 24px;
                 border-radius: 4px;
@@ -57,11 +57,8 @@
                     font-size: 16px;
                 }
             }
-    
         }
     }
-    
-
 }
 
 .font-icon {

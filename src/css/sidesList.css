@@ -1,0 +1,52 @@
+.sides-list {
+  background-image: url("../assets/images/texture_pattern_2X.jpg");
+  padding: 60px 0;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
+}
+
+.sides-list .heading {
+  font-family: "Montserrat", sans-serif;
+  width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 96%;
+}
+
+.sides-list .heading h1 {
+  font-size: 62px;
+  font-weight: 600;
+  color: #e60033;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 680px) {
+  .sides-list .heading h1 {
+    font-size: 48px;
+  }
+}
+
+.sides-list .heading h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+
+@media (max-width: 680px) {
+  .sides-list .heading h3 {
+    font-size: 16px;
+  }
+}
+
+.sides-list .heading p {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+@media (max-width: 680px) {
+  .sides-list .heading p {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=sidesList.css.map */

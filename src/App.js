@@ -16,10 +16,14 @@ import NavBar from './components/commons/navbar.jsx';
 import Footer from './components/commons/footer.jsx';
 
 import { getRamenCategories } from './data/ramenCategories';
+import { getToppingsList } from './data/toppings';
+import { getSidesList } from './data/sides';
 
 export default class App extends Component {
   state = {
     menuItems: getRamenCategories(),
+    toppings: getToppingsList(),
+    sides: getSidesList(),
     currentPath: '',
     theposition: 0
   };
@@ -34,11 +38,13 @@ export default class App extends Component {
     componentDidMount() {
       window.addEventListener('scroll', this.listenToScroll);
       window.addEventListener('click', this.listenToLoad);
+      window.addEventListener('load', this.listenToLoad);
     }
     
     componentWillUnmount() {
       window.removeEventListener('scroll', this.listenToScroll);
       window.removeEventListener('click', this.listenToLoad);
+      window.removeEventListener('load', this.listenToLoad);
     }
     
     listenToScroll = () => {
@@ -60,11 +66,8 @@ export default class App extends Component {
 
       this.setState({ currentPath: pagePath });
     }
-    
 
   render() {
-
- 
     
     return (
       <div>
@@ -80,7 +83,11 @@ export default class App extends Component {
           {/* <Navigation/> */}
             <Switch>
                 <Route path="/" exact render={(props) => <Home menuItems={this.state.menuItems}/>}/>
-                <Route path="/menu" exact render={(props) => <Menu menuItems={this.state.menuItems}/>} />
+                <Route path="/menu" exact render={(props) => <Menu 
+                    menuItems={this.state.menuItems}
+                    toppings={this.state.toppings}
+                    sides={this.state.sides}
+                />} />
                 <Route exact path="/locations" component={Locations}/>
                 <Route exact path="/about" component={About}/> 
                 <Route exact path="/email" component={Email}/>  

@@ -5,6 +5,8 @@
   width: 100%;
   -webkit-transition: 200ms;
   transition: 200ms;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .nav-section.active {
@@ -39,7 +41,7 @@
   position: absolute;
   height: 100px;
   width: 100px;
-  margin: 30px;
+  margin: 21px 48px;
 }
 
 @media (max-width: 535px) {
@@ -159,11 +161,5 @@
     height: 6px;
     width: 32px;
   }
-}
-
-.active {
-  -webkit-transition: 0.3ms;
-  transition: 0.3ms;
-  background-color: #483d22;
 }
 /*# sourceMappingURL=navbar.css.map */

@@ -1,18 +1,27 @@
 .footer {
   background-color: #433d3c;
-  margin: 120px 0 0 0;
+  padding: 60px;
   -webkit-transform: translate(0, -150px);
           transform: translate(0, -150px);
+  font-family: "Montserrat", sans-serif;
 }
 
 .footer .footer-grid {
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
   width: 1300px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
+  top: 10px;
   margin: 0 auto;
-  max-width: 90%;
+  padding: 40px;
+  max-width: 70%;
+  position: absolute;
 }
 
 @media (max-width: 820px) {

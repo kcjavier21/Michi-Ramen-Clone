@@ -1,0 +1,54 @@
+@import './mixins';
+@import './variables';
+
+.grid-list-container {
+    //@include add-testing-border();
+    width: 1000px;
+    max-width: 98%;
+    font-family: $main-font;;
+
+    margin: 60px auto 0 auto;
+    
+    display: grid;
+    grid-gap: 10px 20px;
+
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: auto;
+
+    @include large-mobile {
+        grid-template-columns: 12fr;
+        max-width: 90%;
+    }
+
+
+    .grid-list-item {
+        //@include add-testing-border();
+        padding: 10px 20px;
+
+        span {
+            float: right;
+            font-size: 26px;
+
+            @include small-tablet {
+                font-size: 20px;
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            color:rgb(30, 30, 30);
+            margin-bottom: 8px;
+
+            @include small-tablet {
+                font-size: 22px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            @include small-tablet {
+                font-size: 14px;
+            }
+        }
+    }
+}
