@@ -4,12 +4,8 @@
 .nav-section {
     //@include add-testing-border();
     background-color: transparent;
-    background-position: center;
-    background-size: 120%;
     width: 100%;
     transition: 200ms;
-    // transform: translate(0, 550px);
-    position: sticky;
 
     &.active {
         transition: 200ms;

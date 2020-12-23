@@ -5,21 +5,20 @@ export default class MenuList extends Component {
     
     createMenuItem = (id, type, price, chashus, toppings, bowls) => {
        return <div className="grid-menu-items" key={id}>                        
-                        <h2 className="category">{`${type.toUpperCase()}`}</h2>
-                        <p className="price">{`${price}`}</p>
-                        <ul className="chashus">
-                            CHOICE OF CHASHU:
-                                { chashus.map(c => <li key={c}>{`${c}`}</li>) }
-
-                        </ul>
-                        <ul className="toppings">
-                            TOPPINGS:
-                                { toppings.map(t => <li key={t}>{`${t}`}</li>) }  
-                        </ul>
-                        <ul className="bowls">
-                            { bowls.map(b => <li key={b}>{`${b.toUpperCase()}`}</li>) }
-                        </ul>
-                    </div>;
+                <h2 className="category">{`${type.toUpperCase()}`}</h2>
+                <p className="price">{`${price}`}</p>
+                <ul className="chashus">
+                    CHOICE OF CHASHU:
+                        { chashus.map(c => <li key={c}>{`${c}`}</li>) }
+                </ul>
+                <ul className="toppings">
+                    TOPPINGS:
+                        { toppings.map(t => <li key={t}>{`${t}`}</li>) }  
+                </ul>
+                <ul className="bowls">
+                    { bowls.map(b => <li key={b}>{`${b.toUpperCase()}`}</li>) }
+                </ul>
+            </div>;
     }
 
     render() {

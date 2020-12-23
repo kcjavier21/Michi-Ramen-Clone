@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import '../../css/list.css';
 
 export default class List extends Component {
-    
-    createToppingItem = (id, name, price, description) => {    
+    createListItem = (id, name, price, description) => {    
         return <div className="grid-list-item" key={id}>
                     <span>{`${price}`}</span>
                     <h2>{`${name.toUpperCase()}`}</h2> 
@@ -14,7 +13,7 @@ export default class List extends Component {
         return (
             <div>
                 <div className="grid-list-container">
-                    { this.props.list.map(t => this.createToppingItem(t._id, t.name, t.price, t.description)) }
+                    { this.props.list.map(l => this.createListItem(l._id, l.name, l.price, l.description)) }
                 </div>
             </div>
         )

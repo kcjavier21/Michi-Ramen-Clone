@@ -4,38 +4,36 @@ import HowToOrder from './subcomponents/howToOrder.jsx';
 import MenuList from './subcomponents/menuList.jsx';
 import ToppingsList from './subcomponents/toppingsList.jsx';
 import SidesList from './subcomponents/sidesList.jsx';
+import Beverages from './subcomponents/beverages.jsx';
 
 import mochiHeader from '../../../assets/images/Mochi-header.jpg';
-import toppings from '../../../assets/images/toppings.jpg';
+import toppingsHeader from '../../../assets/images/toppings.jpg';
 
 export default class Menu extends Component {
+    createImageHeader = (image) => {
+        return <div style={
+            {
+                backgroundImage: `url(${image})`,
+                backgroundSize: '100%',
+                backgroundPosition: 'center',
+                height: '40vw',
+                maxHeight: '900px',
+                transform: 'translate(0, -150px)'
+            }
+        } />
+    }
+
     render() {
-        const mochiHeaderStyle = {
-            backgroundImage: `url(${mochiHeader})`,
-            backgroundSize: '100%',
-            backgroundPosition: 'center',
-            height: '40vw',
-            maxHeight: '900px',
-            transform: 'translate(0, -150px)'
-        };
-
-        const toppingsStyle = {
-            backgroundImage: `url(${toppings})`,
-            backgroundSize: '100%',
-            backgroundPosition: 'center',
-            height: '40vw',
-            maxHeight: '900px',
-            transform: 'translate(0, -150px)'
-        };
-
+        const {menuItems, toppings, sides } = this.props;
         return (
             <div style={{paddingTop: '150px'}}>
                 <HowToOrder/>
-                <MenuList menuItems={this.props.menuItems}/>
-                    <div style={toppingsStyle} />   
-                <ToppingsList toppings={this.props.toppings}/>
-                    <div style={mochiHeaderStyle} />
-                <SidesList sides={this.props.sides}/>
+                <MenuList menuItems={menuItems}/>
+                    { this.createImageHeader(toppingsHeader) }  
+                <ToppingsList toppings={toppings}/>
+                    { this.createImageHeader(mochiHeader) }  
+                <SidesList sides={sides}/>
+                <Beverages/>
             </div>
         )
     }

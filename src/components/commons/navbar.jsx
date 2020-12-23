@@ -3,29 +3,20 @@ import { NavLink } from 'react-router-dom';
 import '../../css/navbar.css';
 import logo from '../../assets/images/logo.png';
 
-
-
 class NavBar extends Component { 
+    // === Aims to change the background of navbar ====
     getNavClass = () => {
         let theClass = 'active';
         
         if(this.props.currentPath === '/')
             theClass = this.props.scrollPosition >= 0.03 ? 'active' : '';
-        else
-            theClass = 'active';
 
-        return theClass;
-    };
-
-    getMenuClass = () => {
-        let theClass = 'nav-menu active';
         return theClass;
     };
 
     render() { 
         let navClass = this.getNavClass();
-        let bgStyle = {};
-        bgStyle = this.props.currentPath !== '/' ? { backgroundColor: "#433d3c" } : { };
+        let bgStyle = this.props.currentPath !== '/' ? { backgroundColor: "#433d3c" } : { };
 
         return (
             <React.Fragment>

@@ -7,7 +7,7 @@ class FillerImages extends Component {
                             <img src={`${image}`} alt={`${image}`}></img>
                         </div>;
         }
-
+        
         render() { 
             return ( 
                 <div className="filler-imgs-container">

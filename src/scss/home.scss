@@ -20,7 +20,7 @@
 
     @include large-mobile {
 
-        max-height: 152vw;   
+        max-height: 80vh;   
     }
 
     
@@ -45,8 +45,10 @@
         }
 
         @include large-mobile {
-            margin-top: 12vw;
-            font-size: 40px;
+            margin: 12vw auto 12px auto;
+            font-size: 52px;
+            line-height: 48px;
+            
         }
 
     }

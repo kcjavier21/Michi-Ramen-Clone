@@ -1,0 +1,77 @@
+.beverages-container {
+  background-image: url("../assets/images/texture_pattern_2X.jpg");
+  padding: 60px 0 140px 0;
+  -webkit-transform: translate(0, -150px);
+          transform: translate(0, -150px);
+  color: #1e1e1e;
+}
+
+.beverages-container .beverages-grid {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  grid-row-gap: 40px;
+  font-family: "Economica", sans-serif;
+  -webkit-transform: scale(1, 1.4);
+          transform: scale(1, 1.4);
+  width: 1400px;
+  max-width: 96%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.beverages-container .beverages-grid .beverages-category {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  display: inline;
+  font-size: 40px;
+}
+
+.beverages-container .beverages-grid .beverages-category li {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  display: inline;
+  margin: 0 20px;
+  cursor: pointer;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.beverages-container .beverages-grid .beverages-category li:hover {
+  color: #ffc227;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.beverages-container .beverages-grid .beverages-category li .active {
+  color: #ffc227;
+}
+
+.beverages-container .beverages-grid .beverages-category li .inactive {
+  color: #1e1e1e;
+}
+
+.beverages-container .beverages-grid .beverages-name {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  display: inline;
+  font-size: 20px;
+  -webkit-transform: scale(1, 0.8);
+          transform: scale(1, 0.8);
+}
+
+.beverages-container .beverages-grid .beverages-name li {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  display: inline;
+  margin: 0 32px;
+}
+/*# sourceMappingURL=beverages.css.map */

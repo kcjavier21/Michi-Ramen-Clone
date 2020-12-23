@@ -68,12 +68,11 @@ export default class App extends Component {
     }
 
   render() {
-    
     return (
       <div>
           <div className="content">
           
-               <Sticky innerZ={5}>
+               <Sticky innerZ={1}>
                 <NavBar 
                   scrollPosition={this.state.theposition}
                   currentPath={this.state.currentPath}

@@ -1,12 +1,8 @@
 .nav-section {
   background-color: transparent;
-  background-position: center;
-  background-size: 120%;
   width: 100%;
   -webkit-transition: 200ms;
   transition: 200ms;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 .nav-section.active {
