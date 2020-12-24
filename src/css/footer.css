@@ -12,15 +12,15 @@
   right: 0;
   text-align: center;
   z-index: 1;
-  width: 1300px;
+  width: 1400px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
       grid-template-columns: repeat(3, auto);
   top: 10px;
   margin: 0 auto;
-  padding: 40px;
-  max-width: 70%;
+  padding: 32px 0px;
+  max-width: 90%;
   position: absolute;
 }
 

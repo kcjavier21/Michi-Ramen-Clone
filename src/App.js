@@ -18,12 +18,14 @@ import Footer from './components/commons/footer.jsx';
 import { getRamenCategories } from './data/ramenCategories';
 import { getToppingsList } from './data/toppings';
 import { getSidesList } from './data/sides';
+import { getBeveragesList } from './data/beverages';
 
 export default class App extends Component {
   state = {
     menuItems: getRamenCategories(),
     toppings: getToppingsList(),
     sides: getSidesList(),
+    beverages: getBeveragesList(),
     currentPath: '',
     theposition: 0
   };
@@ -68,6 +70,7 @@ export default class App extends Component {
     }
 
   render() {
+    // console.log(this.state.beverages[0]);
     return (
       <div>
           <div className="content">
@@ -86,6 +89,7 @@ export default class App extends Component {
                     menuItems={this.state.menuItems}
                     toppings={this.state.toppings}
                     sides={this.state.sides}
+                    beverages={this.state.beverages}
                 />} />
                 <Route exact path="/locations" component={Locations}/>
                 <Route exact path="/about" component={About}/> 

@@ -24,7 +24,7 @@ export default class Menu extends Component {
     }
 
     render() {
-        const {menuItems, toppings, sides } = this.props;
+        const {menuItems, toppings, sides, beverages } = this.props;
         return (
             <div style={{paddingTop: '150px'}}>
                 <HowToOrder/>
@@ -33,7 +33,7 @@ export default class Menu extends Component {
                 <ToppingsList toppings={toppings}/>
                     { this.createImageHeader(mochiHeader) }  
                 <SidesList sides={sides}/>
-                <Beverages/>
+                <Beverages beverages={beverages}/>
             </div>
         )
     }

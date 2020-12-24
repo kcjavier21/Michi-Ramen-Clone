@@ -9,14 +9,14 @@
     .footer-grid {
         //@include add-testing-border();
         @include absolutely-centered;
-        width: 1300px;
+        width: 1400px;
 
         display: grid;
         grid-template-columns: repeat(3, auto);
         top: 10px;
         margin: 0 auto;
-        padding: 40px;
-        max-width: 70%;
+        padding: 32px 0px;
+        max-width: 90%;
 
         position: absolute;
 

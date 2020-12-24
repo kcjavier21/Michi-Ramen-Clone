@@ -3,82 +3,56 @@ import '../../../../css/beverages.css';
 
 export default class Beverages extends Component {
     state = {
-        beer: {
-            id: '3001',
-            name: 'Beer',
-            items: ['Draft', 'Japanese Bottles']
-        },
-        tea: {
-            id: '3002',
-            name: 'Tea',
-            items: ['Cold Tea', 'Hot Tea']
-        },
-        sake: {
-            id: '3003',
-            name: 'Sake',
-            items: ['']
-        },
-        wine: {
-            id: '3004',
-            name: 'Wine',
-            items: ['']
-        },
-        temp: {
-            id: '',
-            name: '',
-            items: ['']
-        },
-        activeObject:{}
+        activeObject:this.props.beverages[0]
     }
-
-    changeTempValue = (beverage) => {
-        let temp = this.state.temp;
-        temp = beverage;
-        
-        this.setState({ temp });
-    }
-
-    changeColor = (selection) => {
-        let toggle = false;
-
-        toggle = !toggle;
-
-        return toggle === true ? '#ffc227' : 'rgb(30, 30, 30)';
+    
+    generateBeverageCategory = (elements, index) => {
+        return <li key={index} 
+                    onClick={() => this.toggleActive(index)}
+                    className={this.toggleActiveStyles(index)} 
+                >
+                    {`${elements.category}`}
+                </li>;
     }
 
     generateBeverageList = (beverage) => {
         return <li key={beverage}>{`${beverage.toUpperCase()}`}</li>;
     }
 
-    render() {
-        const { beer, tea, sake, wine, temp } = this.state;
-        const { changeTempValue, generateBeverageList } = this;
+    toggleActive = (index) => {
+        let active = this.state.activeObject;
+        active = this.props.beverages[index];
 
-        // function toggleActive(index) {
-        //     let activeObj = this.state.activeObj;
-        //     activeObj 
-        // }
+        this.setState({ activeObject: active });
+    }
+
+    toggleActiveStyles = (index) => {
+        if(this.props.beverages[index] === this.state.activeObject) {
+            return 'active';
+        } else {
+            return 'inactive';
+        }
+    }
+
+    render() {
+        const { activeObject } = this.state;
+        const { beverages } = this.props;
+        const { generateBeverageList } = this;
 
         return (
             <div className="beverages-container">
-
                 <div className="beverages-grid">
                     <div className="beverages-grid-item">
                         <div className="beverages-category">
-                            <li onClick={(e) => changeTempValue(beer)}>
-                                BEER
-                            </li>
-                            <li onClick={(e) => changeTempValue(sake)}>SAKE</li>
-                            <li onClick={(e) => changeTempValue(wine)}>WINE</li>
-                            <li onClick={(e) => changeTempValue(tea)}>TEA</li>
+                            { beverages.map((elements, index) => 
+                                this.generateBeverageCategory(elements, index)
+                            )}
                         </div>
                     </div>
-
                     <div className="beverages-name">
-                        { temp.items.map(b => generateBeverageList(b)) }
+                        { activeObject.items.map(b => generateBeverageList(b)) }
                     </div>
-                </div>
-                
+                </div>    
             </div>
         )
     }

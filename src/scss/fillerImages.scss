@@ -1,7 +1,7 @@
 @import './mixins';
 
 .filler-imgs-container {
-    @include add-testing-border();
+    //@include add-testing-border();
     width: 100%;
     display: grid;
     background-color: #ffff;
@@ -19,7 +19,7 @@
     }
 
     .filler-imgs {
-        @include add-testing-border();
+        //@include add-testing-border();
         padding: 0;
         margin: 0;
         

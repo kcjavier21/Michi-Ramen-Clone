@@ -1,15 +1,12 @@
 .beverages-container {
   background-image: url("../assets/images/texture_pattern_2X.jpg");
   padding: 60px 0 140px 0;
-  -webkit-transform: translate(0, -150px);
-          transform: translate(0, -150px);
+  -webkit-transform: translate(0, -151px);
+          transform: translate(0, -151px);
   color: #1e1e1e;
 }
 
 .beverages-container .beverages-grid {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (auto)[2];
@@ -25,19 +22,13 @@
 }
 
 .beverages-container .beverages-grid .beverages-category {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
   display: inline;
   font-size: 40px;
 }
 
 .beverages-container .beverages-grid .beverages-category li {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
   display: inline;
-  margin: 0 20px;
+  margin: 0 4vw;
   cursor: pointer;
   -webkit-transition: 200ms;
   transition: 200ms;
@@ -49,18 +40,29 @@
   transition: 200ms;
 }
 
-.beverages-container .beverages-grid .beverages-category li .active {
+@media (max-width: 535px) {
+  .beverages-container .beverages-grid .beverages-category li {
+    margin: 0 3vw;
+  }
+}
+
+@media (max-width: 535px) {
+  .beverages-container .beverages-grid .beverages-category {
+    font-size: 24px;
+  }
+}
+
+.beverages-container .beverages-grid .active {
   color: #ffc227;
 }
 
-.beverages-container .beverages-grid .beverages-category li .inactive {
+.beverages-container .beverages-grid .inactive {
   color: #1e1e1e;
 }
 
 .beverages-container .beverages-grid .beverages-name {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
+  width: 90%;
+  margin: 0 auto;
   display: inline;
   font-size: 20px;
   -webkit-transform: scale(1, 0.8);
@@ -68,10 +70,14 @@
 }
 
 .beverages-container .beverages-grid .beverages-name li {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
   display: inline;
   margin: 0 32px;
+  margin: 0 3vw;
+}
+
+@media (max-width: 535px) {
+  .beverages-container .beverages-grid .beverages-name {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=beverages.css.map */
