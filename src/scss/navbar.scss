@@ -127,17 +127,17 @@
     }
 
 
-    #toggle-btn {
+    #hamburger-btn {
         //@include add-testing-border();
         right: 32px;
         top: 52px;
         transition:left 100ms linear 0ms,transform 200ms ease 100ms;
         position: absolute;
-        display: none;
+        visibility: hidden;
        
         @include tablet {
-            //visibility: visible;
-            display: block;
+            visibility: visible;
+            
         }
 
         @include large-mobile {
@@ -146,7 +146,7 @@
         }
     
           span {
-            //position: relative;
+            position: relative;
             top:0px;
             display:block;
             background:#ffff;
@@ -154,7 +154,7 @@
             height:8px;
             margin:5px 0px;
             cursor:pointer;
-            transition: 0.3s ease-in-out;
+            transition: 0.2s ease-in-out;
 
             @include large-mobile {
                 height: 6px;
@@ -162,6 +162,21 @@
             }
           }
     }
+
+    #hamburger-btn.active span:nth-child(1) {
+        top:15px;
+        transform:rotate(45deg);
+        background-color: red;
+      }
+      
+      #hamburger-btn.active span:nth-child(2) {
+        opacity:0;
+      }
+      #hamburger-btn.active span:nth-child(3) {
+        top:-10px; 
+        transform:rotate(-45deg);
+        background-color: red;
+      }
 }
 
 

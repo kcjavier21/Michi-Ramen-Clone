@@ -4,6 +4,9 @@ import '../../css/navbar.css';
 import logo from '../../assets/images/logo.png';
 
 class NavBar extends Component { 
+    state = {
+        hamburgerActive: false
+    }
     // === Aims to change the background of navbar ====
     getNavClass = () => {
         let theClass = 'active';
@@ -13,6 +16,20 @@ class NavBar extends Component {
 
         return theClass;
     };
+
+    toggleHamburgerClass = () => {
+        let active = this.state.hamburgerActive;
+        console.log(active);
+        active = !active;
+
+        this.setState({ hamburgerActive: active });
+    }
+
+    getHamburgerClass = () => {
+        return this.state.hamburgerActive === true ? 'active' : '';
+    }
+
+    
 
     render() { 
         let navClass = this.getNavClass();
@@ -26,7 +43,7 @@ class NavBar extends Component {
                             <img src={logo} className="logo" alt="Logo"/>
                         </NavLink>
                         
-                        <div id="toggle-btn">
+                        <div id="hamburger-btn" className={this.getHamburgerClass()} onClick={() => this.toggleHamburgerClass()}>
                             <span></span>
                             <span></span>
                             <span></span>
