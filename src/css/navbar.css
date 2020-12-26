@@ -11,6 +11,12 @@
   background-color: #433d3c;
 }
 
+@media (max-width: 820px) {
+  .nav-section {
+    display: none;
+  }
+}
+
 @media (max-width: 535px) {
   .nav-section {
     height: 28vw;

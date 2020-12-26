@@ -1,0 +1,146 @@
+.burger-menu-wrapper {
+  position: fixed;
+  z-index: 1;
+  height: 140px;
+  width: 100%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  visibility: hidden;
+}
+
+@media (max-width: 820px) {
+  .burger-menu-wrapper {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 425px) {
+  .burger-menu-wrapper {
+    height: 100px;
+  }
+}
+
+.burger-menu-wrapper.active {
+  background-color: #433d3c;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.burger-menu-wrapper .burger-menu-wrapper-2 {
+  height: 140px;
+  width: 100%;
+}
+
+.burger-menu-wrapper .burger-menu-wrapper-2 img {
+  margin: 28px 36px;
+  height: 80px;
+  width: 80px;
+}
+
+@media (max-width: 425px) {
+  .burger-menu-wrapper .burger-menu-wrapper-2 img {
+    margin: 20px 36px;
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 48px;
+  height: 40px;
+  right: 48px;
+  top: 52px;
+  visibility: hidden;
+}
+
+@media (max-width: 820px) {
+  .bm-burger-button {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 425px) {
+  .bm-burger-button {
+    visibility: visible;
+    width: 36px;
+    height: 32px;
+    right: 36px;
+    top: 36px;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: #ffce53;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 40px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #e60033;
+  padding-top: 8px;
+  right: 4px;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  padding-right: 10%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #433d3c;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  width: 900px;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #5f503d;
+  padding-right: 900px;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  margin: 16px auto;
+  font-size: 24px;
+  color: #ffc227;
+  text-decoration: none;
+}
+
+.bm-item:hover {
+  color: #966e0a;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: black;
+}
+/*# sourceMappingURL=burgerMenu.css.map */

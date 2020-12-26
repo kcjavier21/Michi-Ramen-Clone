@@ -18,12 +18,34 @@
         max-height: 80vw;
     }
 
-    @include large-mobile {
-
-        max-height: 80vh;   
+    @include tablet {
+        padding-top: 32vh;
     }
 
-    
+    @include large-mobile {
+        max-height: 84vh;   
+    }
+
+    .logo-in-hero {
+        //@include add-testing-border();
+        display: none;
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        top: 164px;
+        left: 24px;
+
+        @include tablet {
+            display: block;
+        }
+
+        @include tablet {
+            display: block;
+            height: 60px;
+            width: 60px;
+        }
+    }
+
     .title{
         //@include add-testing-border();
         @include center();
@@ -41,11 +63,12 @@
         
 
         @include tablet {
-            font-size: 8vw;
+            margin-top: 1px;
+            font-size: 10vw;
         }
 
         @include large-mobile {
-            margin: 12vw auto 12px auto;
+            margin: 12vh auto 12px auto;
             font-size: 52px;
             line-height: 48px;
             
@@ -67,7 +90,7 @@
         max-width: 90%;
 
         @include tablet {
-            font-size: 12px;
+            font-size: 14px;
         }
 
     }

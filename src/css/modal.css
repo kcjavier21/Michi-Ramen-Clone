@@ -1,0 +1,39 @@
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 88%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  display: block;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.modal.inactive {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 80%;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+/*# sourceMappingURL=modal.css.map */

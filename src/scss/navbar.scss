@@ -12,9 +12,14 @@
         background-color: #433d3c;
     }
 
+    @include tablet {
+        //width: 80vw;
+        display: none;
+    } 
+
     @include large-mobile {
         height: 28vw;
-        
+        //width: 80vw;
     } 
 
     .navigation-bar {

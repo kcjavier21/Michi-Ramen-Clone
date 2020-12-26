@@ -1,0 +1,36 @@
+
+.modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    height: 88%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 300ms;
+    display: block;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.3s ease-out;
+      //filter: blur(8px);
+    }
+    
+    &.inactive {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease-out;
+    }
+  }
+  
+  .modal-main {
+    position:fixed;
+    background: white;
+    width: 80%;
+    height: 100px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: 600ms;
+  }
+  

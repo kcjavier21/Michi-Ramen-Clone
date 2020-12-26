@@ -28,7 +28,6 @@ export default class MenuList extends Component {
             <React.Fragment>
                 <div className="menu-list">
                     <h1 className="ramenBowls">RAMEN BOWLS</h1>
-                
                  <div className="grid-menu-container">
                  { menuItems.map(item => this.createMenuItem(item._id, item.type, item.price, item.chashu, item.toppings, item.bowls)) }
                     

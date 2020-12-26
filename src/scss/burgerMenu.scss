@@ -1,0 +1,153 @@
+@import './mixins';
+@import './variables';
+
+
+.burger-menu-wrapper {
+    //@include add-testing-border();
+    position: fixed;
+    z-index: 1;
+    height: 140px;
+    width: 100%;
+    //background: red;
+    transition: 200ms;
+    visibility: hidden;
+
+    @include tablet {
+        visibility: visible;
+    }
+
+    @include mobile {
+        height: 100px;
+        
+    }
+
+    &.active {
+        background-color: $primary-color;
+        transition: 200ms;
+    }
+
+    .burger-menu-wrapper-2 {
+        //@include add-testing-border();
+        height: 140px;
+        width: 100%;
+
+        img {
+            //@include add-testing-border();
+            margin: 28px 36px;
+            height: 80px;
+            width: 80px;
+
+            @include mobile {
+                margin: 20px 36px;
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
+    
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+    //@include add-testing-border();
+    position: fixed;
+    width: 48px;
+    height: 40px;
+    right: 48px;
+    top: 52px;
+    visibility: hidden;
+
+    @include tablet {
+        visibility: visible;
+    }
+
+    @include mobile {
+        visibility: visible;
+        width: 36px;
+        height: 32px;
+        right: 36px;
+        top: 36px;
+    }
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    //@include add-testing-border();
+    border-color: rgba(0, 0, 0, 0.1);
+    background: #ffce53;
+  }
+  
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #a90000;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    //@include add-testing-border();
+    height: 40px;
+    //padding: 40px;
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    //@include add-testing-border();
+    background: $header-color;
+    padding-top: 8px;
+    right: 4px;
+
+  }
+  
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+ 
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    padding-right: 10%;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    background: $primary-color;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    width: 900px;
+    
+    
+  }
+
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #5f503d;
+    padding-right: 900px;
+    
+  }
+
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+  
+  /* Individual item */
+  .bm-item {
+    @include add-testing-border();
+    margin: 16px auto;
+    font-size: 24px;
+  
+    color: $highlight-color;
+    text-decoration: none;
+
+    &:hover {
+        color: #966e0a;
+    }
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    background: rgba(0, 0, 0, 1);
+  }
