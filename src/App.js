@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect, NavLink } from "react-router-dom";
 import Sticky from 'react-stickynode';
-// /import Overlay from 'react-overlay-component';
 import './App.css';
 import './css/burgerMenu.css';
 
 //=== COMPONENTS ===
 import Home from './components/pages/home/home.jsx';
 import Menu from './components/pages/menu/menu.jsx';
-import Locations from './components/pages/locations.jsx';
+import Locations from './components/pages/locations/locations.jsx';
 import About from './components/pages/about.jsx';
 import Email from './components/pages/email.jsx';
 import NotFound from './components/pages/not-found.jsx';
 
 import NavBar from './components/commons/navbar.jsx';
 import Footer from './components/commons/footer.jsx';
-import BurgerMenu from './components/commons/burgerMenuTest.jsx';
-// import Dashboard from './components/commons/dashboard.jsx';
-//import RodalTest from './components/commons/rodalTest.jsx';
+import BurgerMenu from './components/commons/burgerMenu.jsx';
 
+// ==== DATA ====
 import { getRamenCategories } from './data/ramenCategories';
 import { getToppingsList } from './data/toppings';
 import { getSidesList } from './data/sides';
 import { getBeveragesList } from './data/beverages';
+import { getLocations } from './data/locations';
+import { getAbout } from './data/about.js';
 
 import logo from './assets/images/logo.png';
 
@@ -32,37 +32,49 @@ export default class App extends Component {
     toppings: getToppingsList(),
     sides: getSidesList(),
     beverages: getBeveragesList(),
+    locations: getLocations(),
+    about: getAbout(),
     currentPath: '',
     theposition: 0,
     innerWidth: 0
   };
 
   // ===== MOUNTING =====
-    // async componentDidMount() {
-    //   const { data } = await getRamenCategories();
-  
-    //   this.setState({ menuItems: data });
-    // };
 
     componentDidMount() {
-      window.addEventListener('scroll', this.listenToScroll);
-      window.addEventListener('scroll', this.toggleNavBurger);
-      window.addEventListener('load', this.toggleNavBurger);
-      window.addEventListener('click', this.toggleNavBurger);
-      window.addEventListener('click', this.listenToLoad);
-      window.addEventListener('load', this.listenToLoad);
+      window.addEventListener('scroll', this.getScrollPosition);
+
+      window.addEventListener('resize', this.toggleNavBar);
+      window.addEventListener('load', this.toggleNavBar);
+      window.addEventListener('click', this.toggleNavBar);
+
+      window.addEventListener('click', this.getCurrentPath);
+      window.addEventListener('load', this.getCurrentPath);
+      
+      window.addEventListener('load', this.getInnerWidth);
+      window.addEventListener('scroll', this.getInnerWidth);
+      window.addEventListener('resize', this.getInnerWidth);
+     
+      
     }
     
     componentWillUnmount() {
-      window.removeEventListener('scroll', this.listenToScroll);
-      window.removeEventListener('scroll', this.toggleNavBurger);
-      window.removeEventListener('load', this.toggleNavBurger);
-      window.removeEventListener('click', this.toggleNavBurger);
-      window.removeEventListener('click', this.listenToLoad);
-      window.removeEventListener('load', this.listenToLoad);
+      window.removeEventListener('scroll', this.getScrollPosition);
+
+      window.removeEventListener('resize', this.toggleNavBar);
+      window.removeEventListener('load', this.toggleNavBar);
+      window.removeEventListener('click', this.toggleNavBar);
+
+      window.removeEventListener('click', this.getCurrentPath);
+      window.removeEventListener('load', this.getCurrentPath);
+
+      window.removeEventListener('load', this.getInnerWidth);
+      window.removeEventListener('scroll', this.getInnerWidth);
+      window.removeEventListener('resize', this.getInnerWidth);
+    
     }
     
-    listenToScroll = (e) => {
+    getScrollPosition = () => {
       const winScroll =
         document.body.scrollTop || document.documentElement.scrollTop
         
@@ -76,18 +88,18 @@ export default class App extends Component {
       })
     }
 
-    listenToLoad = () => {
+    getCurrentPath = () => {
       const pagePath = window.location.pathname;
       this.setState({ currentPath: pagePath });
-    }
+    };
 
     toggleNavBar = () => {
       if (window.innerWidth >= 825) {
         return <NavBar 
-          scrollPosition={this.state.theposition}
-          currentPath={this.state.currentPath}
-          scrollTop={this.state.scrollTop}
-        />;
+            scrollPosition={this.state.theposition}
+            currentPath={this.state.currentPath}
+            scrollToTop={this.scrollToTop}
+          />;
       } else {
         return null;
       }
@@ -98,20 +110,25 @@ export default class App extends Component {
       
       if(this.state.currentPath === '/')
           theClass = this.state.theposition >= 0.03 ? 'active' : '';
-      return theClass;
-  };
 
-  scrollToTop = () => {
-    //console.log(document.documentElement.scrollTop)
-    document.documentElement.scrollTop = 0;
-  }
+      return theClass;
+    };
+
+    getInnerWidth = () => {
+      this.setState({ innerWidth: window.innerWidth });
+    };
+
+    // ==== AIMS to go upward whenerver you jump to another page ====
+    scrollToTop = () => {
+      document.documentElement.scrollTop = 0;
+    };
 
 
   render() {
       let burgerClass = this.getBurgerClass();
       let bgStyle = this.state.currentPath !== '/' ? { backgroundColor: "#433d3c" } : { };
-      this.toggleNavBar();
-
+      //console.log(this.state.innerWidth);
+      
     return (
       <div>
           <div className="content">
@@ -136,8 +153,13 @@ export default class App extends Component {
                     toppings={this.state.toppings}
                     sides={this.state.sides}
                     beverages={this.state.beverages}
+                    innerWidth={this.state.innerWidth}
                 />} />
-                <Route exact path="/locations" component={Locations}/>
+                <Route exact path="/locations" component={(props) => <Locations 
+                    innerWidth={this.state.innerWidth}
+                    locations={this.state.locations}
+                />}/>
+
                 <Route exact path="/about" component={About}/> 
                 <Route exact path="/email" component={Email}/>  
                 <Route exact path="/not-found" component={NotFound}/>

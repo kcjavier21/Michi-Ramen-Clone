@@ -11,7 +11,7 @@ export default class Beverages extends Component {
                     onClick={() => this.toggleActive(index)}
                     className={this.toggleActiveStyles(index)} 
                 >
-                    {`${elements.category}`}
+                    {`${elements.category.toUpperCase()}`}
                 </li>;
     }
 

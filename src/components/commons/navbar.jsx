@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../css/navbar.css';
 import logo from '../../assets/images/logo.png';
-//import RodalTest from './rodalTest.jsx';
 
 class NavBar extends Component { 
     state = {

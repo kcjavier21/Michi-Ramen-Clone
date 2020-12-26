@@ -53,12 +53,12 @@
         .category {
             //@include add-testing-border();
             font-family: Economica, sans-serif;
-            font-size: 36px;
+            font-size: 44px;
             font-weight: 300;
             transform: scale(1, 1.4);
 
             @include tablet {
-                font-size: 30px;
+                font-size: 36px;
             }
         }
 

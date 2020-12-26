@@ -50,7 +50,7 @@
 
 .menu-list .grid-menu-container .grid-menu-items .category {
   font-family: Economica, sans-serif;
-  font-size: 36px;
+  font-size: 44px;
   font-weight: 300;
   -webkit-transform: scale(1, 1.4);
           transform: scale(1, 1.4);
@@ -58,7 +58,7 @@
 
 @media (max-width: 820px) {
   .menu-list .grid-menu-container .grid-menu-items .category {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 

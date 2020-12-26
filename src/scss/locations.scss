@@ -1,0 +1,61 @@
+@import './mixins';
+@import './variables';
+
+.about {
+    background-image: url('../assets/images/texture_pattern_2X.jpg');
+    color: rgb(30, 30, 30);
+    
+    h1 {
+        //@include add-testing-border();
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 64px;
+
+        @include mobile {
+            font-size: 36px;
+        }
+    }
+
+    .grid-location-container {
+        //@include add-testing-border();
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+        grid-template-rows: auto;
+        grid-gap: 36px 12px;
+        width: 1000px;
+        max-width: 80%;
+        margin: 0 auto;
+        font-family: $main-font;
+        
+        @include small-tablet {
+            grid-template-columns: 12fr;
+            width: 480px;
+            max-width: 80%;
+        }
+
+        .grid-location-item {
+            //@include add-testing-border();
+
+            h2 {
+                font-size: 28px;
+
+                @include mobile {
+                    font-size: 24px;
+                }
+            }
+
+            .info{
+               // @include add-testing-border();
+                font-size: 18px;
+                margin: 28px auto;
+                
+                h3 {
+                    font-weight: 600;
+                    font-size: 18px;
+                    text-decoration: underline;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
