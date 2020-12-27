@@ -48,10 +48,10 @@ class NavBar extends Component {
                             <NavLink to="/menu" className="nav-menu">MENU</NavLink>
                             <NavLink to="/locations" className="nav-menu">LOCATIONS</NavLink>
                             <NavLink to="/about" className="nav-menu">ABOUT</NavLink>
-                            <NavLink to="/email" className="nav-menu">EMAIL</NavLink>
+                            <a href="mailto:hey@michiramen.com" className="nav-menu">EMAIL</a>
                         </div>
 
-                        <button type="button" className="btn-order-online">ORDER ONLINE</button>
+                        <a href="" className="btn-order-online">ORDER ONLINE</a>
                     </nav>
                 </div>
             </React.Fragment>

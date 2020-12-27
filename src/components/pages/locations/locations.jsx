@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../../css/locations.css';
+import FillerImages from '../../commons/fillerImages.jsx';
 
 export default class Locations extends Component {
 

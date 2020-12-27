@@ -1,0 +1,67 @@
+@import './mixins';
+@import './variables';
+
+.about-page {
+    //@include add-testing-border();
+    background-image: url('../assets/images/texture_pattern_2X.jpg');
+    //transform: translate(0, -150px);
+    
+    .article {
+        //@include add-testing-border();
+        width: 800px;
+        max-width: 90%;
+        margin: 40px auto;
+
+        .article-title {
+            //@include add-testing-border();
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 48px;
+            transform: scale(1.1, 1);
+
+            @include mobile {
+                font-size: 28px;
+            }
+        }
+
+        .article-content {
+            //@include add-testing-border();
+            font-family: $main-font;
+            font-size: 18px;
+            line-height: 24px;
+            width: 840px;
+            max-width: 100%;
+            
+            margin: 0 auto;
+            column-count: 2;
+            column-gap: 64px;
+
+            @include large-mobile {
+                column-count: 1;
+                column-gap: 14px;
+            }
+        }
+    }
+
+    .fill-img-container {
+        //@include add-testing-border();
+        width: 100%;
+        display: grid;
+        background-color: #ffff;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 0;
+        padding-bottom: 0;
+
+        .fill-img-item {
+            padding: 0;
+            margin: 0;
+        
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+    }
+}

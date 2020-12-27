@@ -64,9 +64,9 @@
 
         .price {
             //@include add-testing-border();
-            font-family: Economica, sans-serif;
+            font-family: $main-font;
             font-size: 28px;
-            font-weight: 300;
+            font-weight: 400;
             color: $header-color;
             margin-top: 30px;
 

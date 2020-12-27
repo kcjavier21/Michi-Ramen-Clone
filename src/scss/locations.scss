@@ -10,6 +10,7 @@
         text-align: center;
         font-size: 48px;
         margin-bottom: 64px;
+        transform: scale(1.1, 1);
 
         @include mobile {
             font-size: 36px;

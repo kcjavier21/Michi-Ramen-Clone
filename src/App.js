@@ -8,7 +8,7 @@ import './css/burgerMenu.css';
 import Home from './components/pages/home/home.jsx';
 import Menu from './components/pages/menu/menu.jsx';
 import Locations from './components/pages/locations/locations.jsx';
-import About from './components/pages/about.jsx';
+import About from './components/pages/about/about.jsx';
 import Email from './components/pages/email.jsx';
 import NotFound from './components/pages/not-found.jsx';
 
@@ -160,7 +160,10 @@ export default class App extends Component {
                     locations={this.state.locations}
                 />}/>
 
-                <Route exact path="/about" component={About}/> 
+                <Route exact path="/about" component={(props) => <About
+                    about={this.state.about}
+                    innerWidth={this.state.innerWidth}
+                />}/> 
                 <Route exact path="/email" component={Email}/>  
                 <Route exact path="/not-found" component={NotFound}/>
                 

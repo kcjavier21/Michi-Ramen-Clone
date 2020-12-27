@@ -1,0 +1,68 @@
+.about-page {
+  background-image: url("../assets/images/texture_pattern_2X.jpg");
+}
+
+.about-page .article {
+  width: 800px;
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+.about-page .article .article-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 48px;
+  -webkit-transform: scale(1.1, 1);
+          transform: scale(1.1, 1);
+}
+
+@media (max-width: 425px) {
+  .about-page .article .article-title {
+    font-size: 28px;
+  }
+}
+
+.about-page .article .article-content {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  width: 840px;
+  max-width: 100%;
+  margin: 0 auto;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 64px;
+          column-gap: 64px;
+}
+
+@media (max-width: 535px) {
+  .about-page .article .article-content {
+    -webkit-column-count: 1;
+            column-count: 1;
+    -webkit-column-gap: 14px;
+            column-gap: 14px;
+  }
+}
+
+.about-page .fill-img-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  background-color: #ffff;
+  margin: 0 auto;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  grid-gap: 0;
+  padding-bottom: 0;
+}
+
+.about-page .fill-img-container .fill-img-item {
+  padding: 0;
+  margin: 0;
+}
+
+.about-page .fill-img-container .fill-img-item img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=about.css.map */
