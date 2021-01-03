@@ -126,9 +126,6 @@
 
 /* Individual item */
 .bm-item {
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
   margin: 16px auto;
   font-size: 24px;
   color: #ffc227;
