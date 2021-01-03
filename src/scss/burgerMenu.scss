@@ -135,7 +135,7 @@
   
   /* Individual item */
   .bm-item {
-    @include add-testing-border();
+    //@include add-testing-border();
     margin: 16px auto;
     font-size: 24px;
   
